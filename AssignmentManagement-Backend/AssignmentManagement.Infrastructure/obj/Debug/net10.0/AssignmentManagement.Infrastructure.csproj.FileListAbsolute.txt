@@ -1,0 +1,46 @@
+D:\Skills\AssignmentManagement\AssignmentManagement.Infrastructure\bin\Debug\net10.0\AssignmentManagement.Infrastructure.deps.json
+D:\Skills\AssignmentManagement\AssignmentManagement.Infrastructure\bin\Debug\net10.0\AssignmentManagement.Infrastructure.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Infrastructure\bin\Debug\net10.0\AssignmentManagement.Infrastructure.pdb
+D:\Skills\AssignmentManagement\AssignmentManagement.Infrastructure\bin\Debug\net10.0\AssignmentManagement.Domain.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Infrastructure\bin\Debug\net10.0\AssignmentManagement.Domain.pdb
+D:\Skills\AssignmentManagement\AssignmentManagement.Infrastructure\obj\Debug\net10.0\AssignmentManagement.Infrastructure.csproj.AssemblyReference.cache
+D:\Skills\AssignmentManagement\AssignmentManagement.Infrastructure\obj\Debug\net10.0\AssignmentManagement.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\Skills\AssignmentManagement\AssignmentManagement.Infrastructure\obj\Debug\net10.0\AssignmentManagement.Infrastructure.AssemblyInfoInputs.cache
+D:\Skills\AssignmentManagement\AssignmentManagement.Infrastructure\obj\Debug\net10.0\AssignmentManagement.Infrastructure.AssemblyInfo.cs
+D:\Skills\AssignmentManagement\AssignmentManagement.Infrastructure\obj\Debug\net10.0\AssignmentManagement.Infrastructure.csproj.CoreCompileInputs.cache
+D:\Skills\AssignmentManagement\AssignmentManagement.Infrastructure\obj\Debug\net10.0\Assignme.D6826C5D.Up2Date
+D:\Skills\AssignmentManagement\AssignmentManagement.Infrastructure\obj\Debug\net10.0\AssignmentManagement.Infrastructure.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Infrastructure\obj\Debug\net10.0\refint\AssignmentManagement.Infrastructure.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Infrastructure\obj\Debug\net10.0\AssignmentManagement.Infrastructure.pdb
+D:\Skills\AssignmentManagement\AssignmentManagement.Infrastructure\obj\Debug\net10.0\ref\AssignmentManagement.Infrastructure.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.Infrastructure\bin\Debug\net10.0\AssignmentManagement.Infrastructure.deps.json
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.Infrastructure\bin\Debug\net10.0\AssignmentManagement.Infrastructure.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.Infrastructure\bin\Debug\net10.0\AssignmentManagement.Infrastructure.pdb
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.Infrastructure\bin\Debug\net10.0\AssignmentManagement.Domain.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.Infrastructure\bin\Debug\net10.0\AssignmentManagement.Domain.pdb
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.Infrastructure\obj\Debug\net10.0\AssignmentManagement.Infrastructure.csproj.AssemblyReference.cache
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.Infrastructure\obj\Debug\net10.0\AssignmentManagement.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.Infrastructure\obj\Debug\net10.0\AssignmentManagement.Infrastructure.AssemblyInfoInputs.cache
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.Infrastructure\obj\Debug\net10.0\AssignmentManagement.Infrastructure.AssemblyInfo.cs
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.Infrastructure\obj\Debug\net10.0\AssignmentManagement.Infrastructure.csproj.CoreCompileInputs.cache
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.Infrastructure\obj\Debug\net10.0\Assignme.D6826C5D.Up2Date
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.Infrastructure\obj\Debug\net10.0\AssignmentManagement.Infrastructure.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.Infrastructure\obj\Debug\net10.0\refint\AssignmentManagement.Infrastructure.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.Infrastructure\obj\Debug\net10.0\AssignmentManagement.Infrastructure.pdb
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.Infrastructure\obj\Debug\net10.0\ref\AssignmentManagement.Infrastructure.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Infrastructure\bin\Debug\net10.0\AssignmentManagement.Infrastructure.deps.json
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Infrastructure\bin\Debug\net10.0\AssignmentManagement.Infrastructure.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Infrastructure\bin\Debug\net10.0\AssignmentManagement.Infrastructure.pdb
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Infrastructure\bin\Debug\net10.0\AssignmentManagement.Domain.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Infrastructure\bin\Debug\net10.0\AssignmentManagement.Domain.pdb
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Infrastructure\obj\Debug\net10.0\AssignmentManagement.Infrastructure.csproj.AssemblyReference.cache
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Infrastructure\obj\Debug\net10.0\AssignmentManagement.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Infrastructure\obj\Debug\net10.0\AssignmentManagement.Infrastructure.AssemblyInfoInputs.cache
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Infrastructure\obj\Debug\net10.0\AssignmentManagement.Infrastructure.AssemblyInfo.cs
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Infrastructure\obj\Debug\net10.0\AssignmentManagement.Infrastructure.csproj.CoreCompileInputs.cache
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Infrastructure\obj\Debug\net10.0\AssignmentManagement.Infrastructure.sourcelink.json
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Infrastructure\obj\Debug\net10.0\Assignme.D6826C5D.Up2Date
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Infrastructure\obj\Debug\net10.0\AssignmentManagement.Infrastructure.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Infrastructure\obj\Debug\net10.0\refint\AssignmentManagement.Infrastructure.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Infrastructure\obj\Debug\net10.0\AssignmentManagement.Infrastructure.pdb
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Infrastructure\obj\Debug\net10.0\ref\AssignmentManagement.Infrastructure.dll

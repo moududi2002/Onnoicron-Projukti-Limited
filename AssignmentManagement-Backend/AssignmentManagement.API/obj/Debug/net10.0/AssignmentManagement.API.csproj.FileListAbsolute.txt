@@ -1,0 +1,433 @@
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\appsettings.Development.json
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\appsettings.json
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\AssignmentManagement.API.staticwebassets.endpoints.json
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\AssignmentManagement.API.exe
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\AssignmentManagement.API.deps.json
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\AssignmentManagement.API.runtimeconfig.json
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\AssignmentManagement.API.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\AssignmentManagement.API.pdb
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\AutoMapper.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\BCrypt-Net-Next.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\FluentValidation.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\FluentValidation.DependencyInjectionExtensions.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\Humanizer.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\Microsoft.AspNetCore.OpenApi.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\Microsoft.Bcl.Cryptography.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\Microsoft.Build.Framework.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\Microsoft.CodeAnalysis.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\Microsoft.CodeAnalysis.CSharp.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\Microsoft.CodeAnalysis.Workspaces.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\Microsoft.CodeAnalysis.ExternalAccess.RazorCompiler.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\Microsoft.CodeAnalysis.Workspaces.MSBuild.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\Microsoft.Extensions.DependencyModel.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\Microsoft.IdentityModel.Abstractions.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\Microsoft.IdentityModel.Logging.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\Microsoft.IdentityModel.Protocols.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\Microsoft.IdentityModel.Tokens.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\Microsoft.OpenApi.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\Microsoft.VisualStudio.SolutionPersistence.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\Mono.TextTemplating.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\Newtonsoft.Json.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\Npgsql.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\System.CodeDom.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\System.Composition.AttributedModel.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\System.Composition.Convention.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\System.Composition.Hosting.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\System.Composition.Runtime.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\System.Composition.TypedParts.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\System.IdentityModel.Tokens.Jwt.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\cs\Microsoft.CodeAnalysis.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\de\Microsoft.CodeAnalysis.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\es\Microsoft.CodeAnalysis.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\fr\Microsoft.CodeAnalysis.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\it\Microsoft.CodeAnalysis.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\ja\Microsoft.CodeAnalysis.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\ko\Microsoft.CodeAnalysis.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\pl\Microsoft.CodeAnalysis.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\ru\Microsoft.CodeAnalysis.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\cs\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\de\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\es\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\fr\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\it\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\ja\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\ko\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\pl\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\ru\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\AssignmentManagement.Application.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\AssignmentManagement.Domain.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\AssignmentManagement.Infrastructure.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\AssignmentManagement.Application.pdb
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\AssignmentManagement.Infrastructure.pdb
+D:\Skills\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\AssignmentManagement.Domain.pdb
+D:\Skills\AssignmentManagement\AssignmentManagement.API\obj\Debug\net10.0\AssignmentManagement.API.csproj.AssemblyReference.cache
+D:\Skills\AssignmentManagement\AssignmentManagement.API\obj\Debug\net10.0\rpswa.dswa.cache.json
+D:\Skills\AssignmentManagement\AssignmentManagement.API\obj\Debug\net10.0\AssignmentManagement.API.GeneratedMSBuildEditorConfig.editorconfig
+D:\Skills\AssignmentManagement\AssignmentManagement.API\obj\Debug\net10.0\AssignmentManagement.API.AssemblyInfoInputs.cache
+D:\Skills\AssignmentManagement\AssignmentManagement.API\obj\Debug\net10.0\AssignmentManagement.API.AssemblyInfo.cs
+D:\Skills\AssignmentManagement\AssignmentManagement.API\obj\Debug\net10.0\AssignmentManagement.API.csproj.CoreCompileInputs.cache
+D:\Skills\AssignmentManagement\AssignmentManagement.API\obj\Debug\net10.0\AssignmentManagement.API.MvcApplicationPartsAssemblyInfo.cs
+D:\Skills\AssignmentManagement\AssignmentManagement.API\obj\Debug\net10.0\AssignmentManagement.API.MvcApplicationPartsAssemblyInfo.cache
+D:\Skills\AssignmentManagement\AssignmentManagement.API\obj\Debug\net10.0\rjimswa.dswa.cache.json
+D:\Skills\AssignmentManagement\AssignmentManagement.API\obj\Debug\net10.0\rjsmrazor.dswa.cache.json
+D:\Skills\AssignmentManagement\AssignmentManagement.API\obj\Debug\net10.0\rjsmcshtml.dswa.cache.json
+D:\Skills\AssignmentManagement\AssignmentManagement.API\obj\Debug\net10.0\scopedcss\bundle\AssignmentManagement.API.styles.css
+D:\Skills\AssignmentManagement\AssignmentManagement.API\obj\Debug\net10.0\staticwebassets.build.json
+D:\Skills\AssignmentManagement\AssignmentManagement.API\obj\Debug\net10.0\staticwebassets.build.json.cache
+D:\Skills\AssignmentManagement\AssignmentManagement.API\obj\Debug\net10.0\staticwebassets.development.json
+D:\Skills\AssignmentManagement\AssignmentManagement.API\obj\Debug\net10.0\staticwebassets.build.endpoints.json
+D:\Skills\AssignmentManagement\AssignmentManagement.API\obj\Debug\net10.0\swae.build.ex.cache
+D:\Skills\AssignmentManagement\AssignmentManagement.API\obj\Debug\net10.0\Assignme.05C1FF62.Up2Date
+D:\Skills\AssignmentManagement\AssignmentManagement.API\obj\Debug\net10.0\AssignmentManagement.API.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\obj\Debug\net10.0\refint\AssignmentManagement.API.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.API\obj\Debug\net10.0\AssignmentManagement.API.pdb
+D:\Skills\AssignmentManagement\AssignmentManagement.API\obj\Debug\net10.0\AssignmentManagement.API.genruntimeconfig.cache
+D:\Skills\AssignmentManagement\AssignmentManagement.API\obj\Debug\net10.0\ref\AssignmentManagement.API.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\appsettings.Development.json
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\appsettings.json
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\AssignmentManagement.API.staticwebassets.endpoints.json
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\AssignmentManagement.API.exe
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\AssignmentManagement.API.deps.json
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\AssignmentManagement.API.runtimeconfig.json
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\AssignmentManagement.API.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\AssignmentManagement.API.pdb
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\AutoMapper.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\BCrypt-Net-Next.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\FluentValidation.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\FluentValidation.DependencyInjectionExtensions.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\Humanizer.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\Microsoft.AspNetCore.OpenApi.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\Microsoft.Bcl.Cryptography.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\Microsoft.Build.Framework.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\Microsoft.CodeAnalysis.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\Microsoft.CodeAnalysis.CSharp.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\Microsoft.CodeAnalysis.Workspaces.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\Microsoft.CodeAnalysis.ExternalAccess.RazorCompiler.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\Microsoft.CodeAnalysis.Workspaces.MSBuild.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\Microsoft.Extensions.DependencyModel.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\Microsoft.IdentityModel.Abstractions.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\Microsoft.IdentityModel.Logging.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\Microsoft.IdentityModel.Protocols.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\Microsoft.IdentityModel.Tokens.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\Microsoft.OpenApi.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\Microsoft.VisualStudio.SolutionPersistence.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\Mono.TextTemplating.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\Newtonsoft.Json.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\Npgsql.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\System.CodeDom.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\System.Composition.AttributedModel.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\System.Composition.Convention.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\System.Composition.Hosting.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\System.Composition.Runtime.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\System.Composition.TypedParts.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\System.IdentityModel.Tokens.Jwt.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\cs\Microsoft.CodeAnalysis.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\de\Microsoft.CodeAnalysis.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\es\Microsoft.CodeAnalysis.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\fr\Microsoft.CodeAnalysis.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\it\Microsoft.CodeAnalysis.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\ja\Microsoft.CodeAnalysis.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\ko\Microsoft.CodeAnalysis.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\pl\Microsoft.CodeAnalysis.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\ru\Microsoft.CodeAnalysis.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\cs\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\de\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\es\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\fr\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\it\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\ja\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\ko\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\pl\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\ru\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\AssignmentManagement.Application.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\AssignmentManagement.Domain.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\AssignmentManagement.Infrastructure.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\AssignmentManagement.Application.pdb
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\AssignmentManagement.Infrastructure.pdb
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\bin\Debug\net10.0\AssignmentManagement.Domain.pdb
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\obj\Debug\net10.0\AssignmentManagement.API.csproj.AssemblyReference.cache
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\obj\Debug\net10.0\rpswa.dswa.cache.json
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\obj\Debug\net10.0\AssignmentManagement.API.GeneratedMSBuildEditorConfig.editorconfig
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\obj\Debug\net10.0\AssignmentManagement.API.AssemblyInfoInputs.cache
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\obj\Debug\net10.0\AssignmentManagement.API.AssemblyInfo.cs
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\obj\Debug\net10.0\AssignmentManagement.API.csproj.CoreCompileInputs.cache
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\obj\Debug\net10.0\AssignmentManagement.API.MvcApplicationPartsAssemblyInfo.cs
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\obj\Debug\net10.0\AssignmentManagement.API.MvcApplicationPartsAssemblyInfo.cache
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\obj\Debug\net10.0\rjimswa.dswa.cache.json
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\obj\Debug\net10.0\rjsmrazor.dswa.cache.json
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\obj\Debug\net10.0\rjsmcshtml.dswa.cache.json
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\obj\Debug\net10.0\scopedcss\bundle\AssignmentManagement.API.styles.css
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\obj\Debug\net10.0\staticwebassets.build.json
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\obj\Debug\net10.0\staticwebassets.build.json.cache
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\obj\Debug\net10.0\staticwebassets.development.json
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\obj\Debug\net10.0\staticwebassets.build.endpoints.json
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\obj\Debug\net10.0\swae.build.ex.cache
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\obj\Debug\net10.0\Assignme.05C1FF62.Up2Date
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\obj\Debug\net10.0\AssignmentManagement.API.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\obj\Debug\net10.0\refint\AssignmentManagement.API.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\obj\Debug\net10.0\AssignmentManagement.API.pdb
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\obj\Debug\net10.0\AssignmentManagement.API.genruntimeconfig.cache
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.API\obj\Debug\net10.0\ref\AssignmentManagement.API.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\appsettings.Development.json
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\AssignmentManagement.API.staticwebassets.endpoints.json
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\appsettings.json
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\AssignmentManagement.API.exe
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\AssignmentManagement.API.deps.json
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\AssignmentManagement.API.runtimeconfig.json
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\AssignmentManagement.API.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\AssignmentManagement.API.pdb
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\AutoMapper.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\BCrypt-Net-Next.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\FluentValidation.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\FluentValidation.DependencyInjectionExtensions.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\Humanizer.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\Microsoft.AspNetCore.OpenApi.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\Microsoft.Bcl.Cryptography.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\Microsoft.Build.Framework.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\Microsoft.CodeAnalysis.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\Microsoft.CodeAnalysis.CSharp.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\Microsoft.CodeAnalysis.Workspaces.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\Microsoft.CodeAnalysis.ExternalAccess.RazorCompiler.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\Microsoft.CodeAnalysis.Workspaces.MSBuild.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\Microsoft.Extensions.DependencyModel.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\Microsoft.IdentityModel.Abstractions.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\Microsoft.IdentityModel.Logging.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\Microsoft.IdentityModel.Protocols.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\Microsoft.IdentityModel.Tokens.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\Microsoft.OpenApi.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\Microsoft.VisualStudio.SolutionPersistence.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\Mono.TextTemplating.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\Newtonsoft.Json.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\Npgsql.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\System.CodeDom.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\System.Composition.AttributedModel.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\System.Composition.Convention.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\System.Composition.Hosting.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\System.Composition.Runtime.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\System.Composition.TypedParts.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\System.IdentityModel.Tokens.Jwt.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\cs\Microsoft.CodeAnalysis.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\de\Microsoft.CodeAnalysis.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\es\Microsoft.CodeAnalysis.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\fr\Microsoft.CodeAnalysis.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\it\Microsoft.CodeAnalysis.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\ja\Microsoft.CodeAnalysis.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\ko\Microsoft.CodeAnalysis.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\pl\Microsoft.CodeAnalysis.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\ru\Microsoft.CodeAnalysis.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\cs\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\de\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\es\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\fr\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\it\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\ja\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\ko\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\pl\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\ru\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\AssignmentManagement.Application.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\AssignmentManagement.Domain.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\AssignmentManagement.Infrastructure.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\AssignmentManagement.Application.pdb
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\AssignmentManagement.Infrastructure.pdb
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\bin\Debug\net10.0\AssignmentManagement.Domain.pdb
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\obj\Debug\net10.0\AssignmentManagement.API.csproj.AssemblyReference.cache
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\obj\Debug\net10.0\rpswa.dswa.cache.json
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\obj\Debug\net10.0\AssignmentManagement.API.GeneratedMSBuildEditorConfig.editorconfig
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\obj\Debug\net10.0\AssignmentManagement.API.AssemblyInfoInputs.cache
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\obj\Debug\net10.0\AssignmentManagement.API.AssemblyInfo.cs
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\obj\Debug\net10.0\AssignmentManagement.API.csproj.CoreCompileInputs.cache
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\obj\Debug\net10.0\AssignmentManagement.API.MvcApplicationPartsAssemblyInfo.cs
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\obj\Debug\net10.0\AssignmentManagement.API.MvcApplicationPartsAssemblyInfo.cache
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\obj\Debug\net10.0\AssignmentManagement.API.sourcelink.json
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\obj\Debug\net10.0\rjimswa.dswa.cache.json
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\obj\Debug\net10.0\rjsmrazor.dswa.cache.json
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\obj\Debug\net10.0\rjsmcshtml.dswa.cache.json
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\obj\Debug\net10.0\scopedcss\bundle\AssignmentManagement.API.styles.css
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\obj\Debug\net10.0\staticwebassets.build.json
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\obj\Debug\net10.0\staticwebassets.build.json.cache
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\obj\Debug\net10.0\staticwebassets.development.json
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\obj\Debug\net10.0\staticwebassets.build.endpoints.json
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\obj\Debug\net10.0\swae.build.ex.cache
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\obj\Debug\net10.0\Assignme.05C1FF62.Up2Date
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\obj\Debug\net10.0\AssignmentManagement.API.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\obj\Debug\net10.0\refint\AssignmentManagement.API.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\obj\Debug\net10.0\AssignmentManagement.API.pdb
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\obj\Debug\net10.0\AssignmentManagement.API.genruntimeconfig.cache
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.API\obj\Debug\net10.0\ref\AssignmentManagement.API.dll

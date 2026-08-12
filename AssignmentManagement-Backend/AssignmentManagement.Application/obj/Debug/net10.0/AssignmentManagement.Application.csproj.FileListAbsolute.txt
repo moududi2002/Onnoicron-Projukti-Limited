@@ -1,0 +1,52 @@
+D:\Skills\AssignmentManagement\AssignmentManagement.Application\bin\Debug\net10.0\AssignmentManagement.Application.deps.json
+D:\Skills\AssignmentManagement\AssignmentManagement.Application\bin\Debug\net10.0\AssignmentManagement.Application.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Application\bin\Debug\net10.0\AssignmentManagement.Application.pdb
+D:\Skills\AssignmentManagement\AssignmentManagement.Application\bin\Debug\net10.0\AssignmentManagement.Domain.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Application\bin\Debug\net10.0\AssignmentManagement.Infrastructure.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Application\bin\Debug\net10.0\AssignmentManagement.Domain.pdb
+D:\Skills\AssignmentManagement\AssignmentManagement.Application\bin\Debug\net10.0\AssignmentManagement.Infrastructure.pdb
+D:\Skills\AssignmentManagement\AssignmentManagement.Application\obj\Debug\net10.0\AssignmentManagement.Application.csproj.AssemblyReference.cache
+D:\Skills\AssignmentManagement\AssignmentManagement.Application\obj\Debug\net10.0\AssignmentManagement.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\Skills\AssignmentManagement\AssignmentManagement.Application\obj\Debug\net10.0\AssignmentManagement.Application.AssemblyInfoInputs.cache
+D:\Skills\AssignmentManagement\AssignmentManagement.Application\obj\Debug\net10.0\AssignmentManagement.Application.AssemblyInfo.cs
+D:\Skills\AssignmentManagement\AssignmentManagement.Application\obj\Debug\net10.0\AssignmentManagement.Application.csproj.CoreCompileInputs.cache
+D:\Skills\AssignmentManagement\AssignmentManagement.Application\obj\Debug\net10.0\Assignme.C661ACA7.Up2Date
+D:\Skills\AssignmentManagement\AssignmentManagement.Application\obj\Debug\net10.0\AssignmentManagement.Application.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Application\obj\Debug\net10.0\refint\AssignmentManagement.Application.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Application\obj\Debug\net10.0\AssignmentManagement.Application.pdb
+D:\Skills\AssignmentManagement\AssignmentManagement.Application\obj\Debug\net10.0\ref\AssignmentManagement.Application.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.Application\bin\Debug\net10.0\AssignmentManagement.Application.deps.json
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.Application\bin\Debug\net10.0\AssignmentManagement.Application.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.Application\bin\Debug\net10.0\AssignmentManagement.Application.pdb
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.Application\bin\Debug\net10.0\AssignmentManagement.Domain.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.Application\bin\Debug\net10.0\AssignmentManagement.Infrastructure.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.Application\bin\Debug\net10.0\AssignmentManagement.Domain.pdb
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.Application\bin\Debug\net10.0\AssignmentManagement.Infrastructure.pdb
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.Application\obj\Debug\net10.0\AssignmentManagement.Application.csproj.AssemblyReference.cache
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.Application\obj\Debug\net10.0\AssignmentManagement.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.Application\obj\Debug\net10.0\AssignmentManagement.Application.AssemblyInfoInputs.cache
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.Application\obj\Debug\net10.0\AssignmentManagement.Application.AssemblyInfo.cs
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.Application\obj\Debug\net10.0\AssignmentManagement.Application.csproj.CoreCompileInputs.cache
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.Application\obj\Debug\net10.0\Assignme.C661ACA7.Up2Date
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.Application\obj\Debug\net10.0\AssignmentManagement.Application.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.Application\obj\Debug\net10.0\refint\AssignmentManagement.Application.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.Application\obj\Debug\net10.0\AssignmentManagement.Application.pdb
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement\AssignmentManagement.Application\obj\Debug\net10.0\ref\AssignmentManagement.Application.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Application\bin\Debug\net10.0\AssignmentManagement.Application.deps.json
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Application\bin\Debug\net10.0\AssignmentManagement.Application.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Application\bin\Debug\net10.0\AssignmentManagement.Application.pdb
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Application\bin\Debug\net10.0\AssignmentManagement.Domain.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Application\bin\Debug\net10.0\AssignmentManagement.Infrastructure.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Application\bin\Debug\net10.0\AssignmentManagement.Domain.pdb
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Application\bin\Debug\net10.0\AssignmentManagement.Infrastructure.pdb
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Application\obj\Debug\net10.0\AssignmentManagement.Application.csproj.AssemblyReference.cache
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Application\obj\Debug\net10.0\AssignmentManagement.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Application\obj\Debug\net10.0\AssignmentManagement.Application.AssemblyInfoInputs.cache
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Application\obj\Debug\net10.0\AssignmentManagement.Application.AssemblyInfo.cs
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Application\obj\Debug\net10.0\AssignmentManagement.Application.csproj.CoreCompileInputs.cache
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Application\obj\Debug\net10.0\AssignmentManagement.Application.sourcelink.json
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Application\obj\Debug\net10.0\Assignme.C661ACA7.Up2Date
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Application\obj\Debug\net10.0\AssignmentManagement.Application.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Application\obj\Debug\net10.0\refint\AssignmentManagement.Application.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Application\obj\Debug\net10.0\AssignmentManagement.Application.pdb
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Application\obj\Debug\net10.0\ref\AssignmentManagement.Application.dll

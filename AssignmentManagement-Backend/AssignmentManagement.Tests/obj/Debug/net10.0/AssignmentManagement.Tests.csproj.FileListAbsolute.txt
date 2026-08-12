@@ -1,0 +1,241 @@
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\bin\Debug\net10.0\.msCoverageSourceRootsMapping_AssignmentManagement.Tests
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\bin\Debug\net10.0\CoverletSourceRootsMapping_AssignmentManagement.Tests
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\bin\Debug\net10.0\testhost.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\bin\Debug\net10.0\xunit.abstractions.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\bin\Debug\net10.0\testhost.exe
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\bin\Debug\net10.0\xunit.runner.visualstudio.testadapter.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\bin\Debug\net10.0\AssignmentManagement.Tests.deps.json
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\bin\Debug\net10.0\AssignmentManagement.Tests.runtimeconfig.json
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\bin\Debug\net10.0\AssignmentManagement.Tests.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\bin\Debug\net10.0\AssignmentManagement.Tests.pdb
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\bin\Debug\net10.0\AutoMapper.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\bin\Debug\net10.0\BCrypt-Net-Next.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\bin\Debug\net10.0\Castle.Core.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\bin\Debug\net10.0\FluentValidation.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\bin\Debug\net10.0\FluentValidation.DependencyInjectionExtensions.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\bin\Debug\net10.0\Microsoft.VisualStudio.CodeCoverage.Shim.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.InMemory.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\bin\Debug\net10.0\Microsoft.IdentityModel.Abstractions.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\bin\Debug\net10.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\bin\Debug\net10.0\Microsoft.IdentityModel.Logging.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\bin\Debug\net10.0\Microsoft.IdentityModel.Tokens.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\bin\Debug\net10.0\Microsoft.TestPlatform.CoreUtilities.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\bin\Debug\net10.0\Microsoft.TestPlatform.PlatformAbstractions.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\bin\Debug\net10.0\Microsoft.VisualStudio.TestPlatform.ObjectModel.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\bin\Debug\net10.0\Microsoft.TestPlatform.CommunicationUtilities.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\bin\Debug\net10.0\Microsoft.TestPlatform.CrossPlatEngine.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\bin\Debug\net10.0\Microsoft.TestPlatform.Utilities.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\bin\Debug\net10.0\Microsoft.VisualStudio.TestPlatform.Common.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\bin\Debug\net10.0\Moq.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\bin\Debug\net10.0\Newtonsoft.Json.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\bin\Debug\net10.0\Npgsql.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\bin\Debug\net10.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\bin\Debug\net10.0\xunit.assert.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\bin\Debug\net10.0\xunit.core.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\bin\Debug\net10.0\xunit.execution.dotnet.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\bin\Debug\net10.0\cs\Microsoft.TestPlatform.CoreUtilities.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\bin\Debug\net10.0\cs\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\bin\Debug\net10.0\de\Microsoft.TestPlatform.CoreUtilities.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\bin\Debug\net10.0\de\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\bin\Debug\net10.0\es\Microsoft.TestPlatform.CoreUtilities.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\bin\Debug\net10.0\es\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\bin\Debug\net10.0\fr\Microsoft.TestPlatform.CoreUtilities.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\bin\Debug\net10.0\fr\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\bin\Debug\net10.0\it\Microsoft.TestPlatform.CoreUtilities.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\bin\Debug\net10.0\it\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\bin\Debug\net10.0\ja\Microsoft.TestPlatform.CoreUtilities.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\bin\Debug\net10.0\ja\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\bin\Debug\net10.0\ko\Microsoft.TestPlatform.CoreUtilities.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\bin\Debug\net10.0\ko\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\bin\Debug\net10.0\pl\Microsoft.TestPlatform.CoreUtilities.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\bin\Debug\net10.0\pl\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\bin\Debug\net10.0\pt-BR\Microsoft.TestPlatform.CoreUtilities.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\bin\Debug\net10.0\pt-BR\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\bin\Debug\net10.0\ru\Microsoft.TestPlatform.CoreUtilities.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\bin\Debug\net10.0\ru\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\bin\Debug\net10.0\tr\Microsoft.TestPlatform.CoreUtilities.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\bin\Debug\net10.0\tr\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\bin\Debug\net10.0\zh-Hans\Microsoft.TestPlatform.CoreUtilities.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\bin\Debug\net10.0\zh-Hans\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\bin\Debug\net10.0\zh-Hant\Microsoft.TestPlatform.CoreUtilities.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\bin\Debug\net10.0\zh-Hant\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\bin\Debug\net10.0\cs\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\bin\Debug\net10.0\cs\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\bin\Debug\net10.0\cs\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\bin\Debug\net10.0\de\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\bin\Debug\net10.0\de\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\bin\Debug\net10.0\de\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\bin\Debug\net10.0\es\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\bin\Debug\net10.0\es\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\bin\Debug\net10.0\es\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\bin\Debug\net10.0\fr\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\bin\Debug\net10.0\fr\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\bin\Debug\net10.0\fr\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\bin\Debug\net10.0\it\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\bin\Debug\net10.0\it\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\bin\Debug\net10.0\it\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\bin\Debug\net10.0\ja\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\bin\Debug\net10.0\ja\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\bin\Debug\net10.0\ja\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\bin\Debug\net10.0\ko\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\bin\Debug\net10.0\ko\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\bin\Debug\net10.0\ko\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\bin\Debug\net10.0\pl\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\bin\Debug\net10.0\pl\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\bin\Debug\net10.0\pl\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\bin\Debug\net10.0\pt-BR\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\bin\Debug\net10.0\pt-BR\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\bin\Debug\net10.0\pt-BR\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\bin\Debug\net10.0\ru\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\bin\Debug\net10.0\ru\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\bin\Debug\net10.0\ru\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\bin\Debug\net10.0\tr\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\bin\Debug\net10.0\tr\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\bin\Debug\net10.0\tr\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\bin\Debug\net10.0\zh-Hans\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\bin\Debug\net10.0\zh-Hans\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\bin\Debug\net10.0\zh-Hans\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\bin\Debug\net10.0\zh-Hant\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\bin\Debug\net10.0\zh-Hant\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\bin\Debug\net10.0\zh-Hant\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\bin\Debug\net10.0\AssignmentManagement.Application.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\bin\Debug\net10.0\AssignmentManagement.Domain.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\bin\Debug\net10.0\AssignmentManagement.Infrastructure.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\bin\Debug\net10.0\AssignmentManagement.Application.pdb
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\bin\Debug\net10.0\AssignmentManagement.Domain.pdb
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\bin\Debug\net10.0\AssignmentManagement.Infrastructure.pdb
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\obj\Debug\net10.0\AssignmentManagement.Tests.csproj.AssemblyReference.cache
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\obj\Debug\net10.0\AssignmentManagement.Tests.GeneratedMSBuildEditorConfig.editorconfig
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\obj\Debug\net10.0\AssignmentManagement.Tests.AssemblyInfoInputs.cache
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\obj\Debug\net10.0\AssignmentManagement.Tests.AssemblyInfo.cs
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\obj\Debug\net10.0\AssignmentManagement.Tests.csproj.CoreCompileInputs.cache
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\obj\Debug\net10.0\Assignme.69D216C8.Up2Date
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\obj\Debug\net10.0\AssignmentManagement.Tests.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\obj\Debug\net10.0\refint\AssignmentManagement.Tests.dll
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\obj\Debug\net10.0\AssignmentManagement.Tests.pdb
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\obj\Debug\net10.0\AssignmentManagement.Tests.genruntimeconfig.cache
+D:\Skills\AssignmentManagement\AssignmentManagement.Tests\obj\Debug\net10.0\ref\AssignmentManagement.Tests.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\.msCoverageSourceRootsMapping_AssignmentManagement.Tests
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\CoverletSourceRootsMapping_AssignmentManagement.Tests
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\testhost.exe
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\testhost.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\xunit.abstractions.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\xunit.runner.visualstudio.testadapter.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\AssignmentManagement.Tests.deps.json
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\AssignmentManagement.Tests.runtimeconfig.json
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\AssignmentManagement.Tests.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\AssignmentManagement.Tests.pdb
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\AutoMapper.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\BCrypt-Net-Next.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\Castle.Core.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\FluentValidation.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\FluentValidation.DependencyInjectionExtensions.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\Microsoft.VisualStudio.CodeCoverage.Shim.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.InMemory.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\Microsoft.IdentityModel.Abstractions.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\Microsoft.IdentityModel.Logging.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\Microsoft.IdentityModel.Tokens.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\Microsoft.TestPlatform.CoreUtilities.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\Microsoft.TestPlatform.PlatformAbstractions.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\Microsoft.VisualStudio.TestPlatform.ObjectModel.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\Microsoft.TestPlatform.CommunicationUtilities.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\Microsoft.TestPlatform.CrossPlatEngine.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\Microsoft.TestPlatform.Utilities.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\Microsoft.VisualStudio.TestPlatform.Common.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\Moq.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\Newtonsoft.Json.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\Npgsql.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\xunit.assert.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\xunit.core.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\xunit.execution.dotnet.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\cs\Microsoft.TestPlatform.CoreUtilities.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\cs\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\de\Microsoft.TestPlatform.CoreUtilities.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\de\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\es\Microsoft.TestPlatform.CoreUtilities.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\es\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\fr\Microsoft.TestPlatform.CoreUtilities.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\fr\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\it\Microsoft.TestPlatform.CoreUtilities.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\it\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\ja\Microsoft.TestPlatform.CoreUtilities.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\ja\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\ko\Microsoft.TestPlatform.CoreUtilities.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\ko\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\pl\Microsoft.TestPlatform.CoreUtilities.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\pl\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\pt-BR\Microsoft.TestPlatform.CoreUtilities.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\pt-BR\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\ru\Microsoft.TestPlatform.CoreUtilities.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\ru\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\tr\Microsoft.TestPlatform.CoreUtilities.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\tr\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\zh-Hans\Microsoft.TestPlatform.CoreUtilities.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\zh-Hans\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\zh-Hant\Microsoft.TestPlatform.CoreUtilities.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\zh-Hant\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\cs\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\cs\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\cs\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\de\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\de\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\de\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\es\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\es\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\es\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\fr\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\fr\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\fr\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\it\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\it\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\it\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\ja\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\ja\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\ja\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\ko\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\ko\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\ko\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\pl\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\pl\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\pl\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\pt-BR\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\pt-BR\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\pt-BR\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\ru\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\ru\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\ru\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\tr\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\tr\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\tr\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\zh-Hans\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\zh-Hans\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\zh-Hans\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\zh-Hant\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\zh-Hant\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\zh-Hant\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\AssignmentManagement.Application.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\AssignmentManagement.Domain.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\AssignmentManagement.Infrastructure.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\AssignmentManagement.Application.pdb
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\AssignmentManagement.Domain.pdb
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\AssignmentManagement.Infrastructure.pdb
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\obj\Debug\net10.0\AssignmentManagement.Tests.csproj.AssemblyReference.cache
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\obj\Debug\net10.0\AssignmentManagement.Tests.GeneratedMSBuildEditorConfig.editorconfig
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\obj\Debug\net10.0\AssignmentManagement.Tests.AssemblyInfoInputs.cache
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\obj\Debug\net10.0\AssignmentManagement.Tests.AssemblyInfo.cs
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\obj\Debug\net10.0\AssignmentManagement.Tests.csproj.CoreCompileInputs.cache
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\obj\Debug\net10.0\AssignmentManagement.Tests.sourcelink.json
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\obj\Debug\net10.0\Assignme.69D216C8.Up2Date
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\obj\Debug\net10.0\AssignmentManagement.Tests.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\obj\Debug\net10.0\refint\AssignmentManagement.Tests.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\obj\Debug\net10.0\AssignmentManagement.Tests.pdb
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\obj\Debug\net10.0\AssignmentManagement.Tests.genruntimeconfig.cache
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\obj\Debug\net10.0\ref\AssignmentManagement.Tests.dll
