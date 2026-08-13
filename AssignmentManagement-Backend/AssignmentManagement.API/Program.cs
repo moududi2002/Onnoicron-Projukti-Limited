@@ -115,6 +115,24 @@ app.UseHttpsRedirection();
 app.UseAuthentication();
 app.UseAuthorization();
 
+app.MapGet("/", () => Results.Ok(new
+{
+    message = "Assignment Management API is running!",
+    status = "success",
+    service = "Assignment Management System",
+    environment = "production",
+    timestamp = DateTime.UtcNow
+}));
+
+app.MapGet("/api", () => Results.Ok(new
+{
+    message = "Assignment Management API is running!",
+    status = "success",
+    service = "Assignment Management System",
+    environment = "production",
+    timestamp = DateTime.UtcNow
+}));
+
 app.MapControllers();
 
 
