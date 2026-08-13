@@ -1,3 +1,5 @@
+import type { Attachment } from './file.types';
+
 export interface Submission {
   id: string;
   assignmentId: string;
@@ -10,9 +12,9 @@ export interface Submission {
   marks?: number;
   maximumMarks?: number;
   feedback?: string;
-  strengths?: string;         // New
-  areasForImprovement?: string; // New
-  grade?: string;             // New (A+, A, B, C, D, F)
+  strengths?: string;
+  areasForImprovement?: string;
+  grade?: string;
   submittedAt: string;
   updatedAt?: string;
   gradedAt?: string;
@@ -20,6 +22,12 @@ export interface Submission {
   isLate?: boolean;
   isGraded?: boolean;
   gradePercentage?: string;
+}
+
+export interface CreateSubmissionDto {
+  assignmentId: string;
+  content: string;
+  attachmentIds?: string[];
 }
 
 export interface GradeSubmissionDto {
