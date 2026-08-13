@@ -1,6 +1,7 @@
 // src/app/(auth)/login/page.tsx
 'use client';
 
+
 import { useState } from 'react';
 import { useAuth } from '@/contexts/AuthContext';
 import { useRouter } from 'next/navigation';
@@ -40,7 +41,7 @@ export default function LoginPage() {
     } finally {
       setIsSubmitting(false);
     }
-  };
+  }; 
 
   return (
     <div>

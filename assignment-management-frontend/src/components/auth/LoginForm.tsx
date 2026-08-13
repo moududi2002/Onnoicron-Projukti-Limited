@@ -32,24 +32,24 @@ export default function LoginForm() {
   const onSubmit = async (data: LoginFormData) => {
     setIsSubmitting(true);
     try {
-      await login(data);
+      // ১. সরাসরি login থেকে রিটার্ন হওয়া user ডাটা নিন
+      const user = await login(data);
       toast.success('Login successful!');
 
-      // localStorage থেকে ইউজার তথ্য নিয়ে রোল অনুযায়ী রিডাইরেক্ট
-      const storedUser = localStorage.getItem('user');
-      if (storedUser) {
-        const user = JSON.parse(storedUser);
-        const role = user.role?.toLowerCase();
+      // Debugging: কনসোলে রোল চেক করুন
+      console.log('Logged in user object:', user);
 
-        if (role === 'admin') {
-          router.push('/admin');
-        } else if (role === 'teacher') {
-          router.push('/teacher');
-        } else if (role === 'student') {
-          router.push('/student');
-        } else {
-          router.push('/login');
-        }
+      const rawRole = String(user.role || '').toLowerCase();
+
+      // ২. রোল চেক করে রিডাইরেক্ট
+      if (rawRole.includes('admin')) {
+        router.push('/admin');
+      } else if (rawRole.includes('teacher')) {
+        router.push('/teacher');
+      } else if (rawRole.includes('student')) {
+        router.push('/student');
+      } else {
+        toast.error(`Unknown role: ${user.role}`);
       }
     } catch (error: any) {
       toast.error(error.message || 'Invalid credentials');

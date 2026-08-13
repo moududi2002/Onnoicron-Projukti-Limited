@@ -17,7 +17,8 @@ const createUserSchema = z.object({
   username: z.string().min(3, 'Username must be at least 3 characters'),
   email: z.string().email('Invalid email'),
   password: z.string().min(6, 'Password must be at least 6 characters'),
-  role: z.enum(['Admin', 'Teacher', 'Student']),
+  // role: z.enum(['Admin', 'Teacher', 'Student']),
+  role: z.coerce.number(),
 });
 
 type CreateUserFormData = z.infer<typeof createUserSchema>;
@@ -32,7 +33,7 @@ export default function CreateUserPage() {
     formState: { errors },
   } = useForm<CreateUserFormData>({
     resolver: zodResolver(createUserSchema),
-    defaultValues: { role: 'Student' },
+    defaultValues: { role: 2 }, //  2 represents 'Student' in the backend
   });
 
   const onSubmit = async (data: CreateUserFormData) => {
@@ -85,11 +86,29 @@ export default function CreateUserPage() {
           <div>
             <label className="block text-sm font-medium text-gray-700">Role</label>
             <select {...register('role')} className="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500">
+              <option value="0">Admin</option>
+              <option value="1">Teacher</option>
+              <option value="2">Student</option>
+            </select>
+            {errors.role && (
+              <p className="mt-1 text-sm text-danger-600">
+                {errors.role.message}
+                </p>
+                )}
+
+
+            {/* Additional fields can be added here */}
+
+              
+
+            {/* <label className="block text-sm font-medium text-gray-700">Role</label>
+            <select {...register('role')} className="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500">
               <option value="Student">Student</option>
               <option value="Teacher">Teacher</option>
               <option value="Admin">Admin</option>
             </select>
             {errors.role && <p className="mt-1 text-sm text-danger-600">{errors.role.message}</p>}
+            */}
           </div>
         </div>
 

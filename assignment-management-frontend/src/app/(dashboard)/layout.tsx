@@ -27,6 +27,19 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
     item.roles.includes(user?.role || '')
   );
 
+    const getDashboardPath = () => {
+    switch (user?.role) {
+      case 'Admin':
+        return '/admin';
+      case 'Teacher':
+        return '/teacher';
+      case 'Student':
+        return '/student';
+      default:
+        return '/login';
+    }
+  };
+
   return (
     <div className="h-screen flex overflow-hidden bg-gray-100">
       {/* Mobile sidebar overlay */}
@@ -77,7 +90,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
 
         {/* Navigation */}
         <nav className="flex-1 px-4 py-4 space-y-1 overflow-y-auto">
-          {userNavigation.map((item) => (
+         {/* {userNavigation.map((item) => (
             <div key={item.label}>
               <Link
                 href={item.href}
@@ -111,7 +124,58 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
                 </div>
               )}
             </div>
-          ))}
+          ))} 
+          */}
+
+
+          {userNavigation.map((item) => {
+            const itemHref =
+              item.label === 'Dashboard'
+                ? getDashboardPath()
+                : item.href;
+
+            const isActive =
+              pathname === itemHref ||
+              (item.label !== 'Dashboard' && pathname.startsWith(itemHref + '/'));
+
+            return (
+              <div key={item.label}>
+                <Link
+                  href={itemHref}
+                  onClick={() => setSidebarOpen(false)}
+                  className={`flex items-center px-3 py-2 text-sm font-medium rounded-lg transition-colors ${
+                    isActive
+                      ? 'bg-primary-100 text-primary-700'
+                      : 'text-gray-700 hover:bg-gray-100'
+                  }`}
+                >
+                  <item.icon className="mr-3 h-5 w-5 flex-shrink-0" />
+                  {item.label}
+                </Link>
+
+                {item.children && pathname.startsWith(item.href) && (
+                  <div className="ml-8 mt-1 space-y-1">
+                    {item.children
+                      .filter(child => child.roles.includes(user?.role || ''))
+                      .map((child) => (
+                        <Link
+                          key={child.label}
+                          href={child.href}
+                          onClick={() => setSidebarOpen(false)}
+                          className={`flex items-center px-3 py-1.5 text-sm rounded-lg transition-colors ${
+                            pathname === child.href
+                              ? 'text-primary-700 font-medium'
+                              : 'text-gray-600 hover:text-gray-900'
+                          }`}
+                        >
+                          {child.label}
+                        </Link>
+                      ))}
+                  </div>
+                )}
+              </div>
+            );
+          })}
         </nav>
 
         {/* Logout */}

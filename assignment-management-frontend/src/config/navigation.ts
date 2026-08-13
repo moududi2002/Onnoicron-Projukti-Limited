@@ -1,3 +1,4 @@
+// src/config/navigation.ts
 import {
   HiHome, HiUsers, HiAcademicCap, HiBookOpen,
   HiClipboardList, HiDocumentText, HiCog, HiUser,
@@ -14,7 +15,7 @@ export interface NavItem {
 export const navigation: NavItem[] = [
   {
     label: 'Dashboard',
-    href: '/dashboard',
+    href: '',
     icon: HiHome,
     roles: ['Admin', 'Teacher', 'Student'],
   },

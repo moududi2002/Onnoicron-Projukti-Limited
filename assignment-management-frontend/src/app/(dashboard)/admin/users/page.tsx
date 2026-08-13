@@ -158,14 +158,22 @@ export default function UserManagementPage() {
                       </div>
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap">
-                      <span className={`px-2 py-1 text-xs font-medium rounded-full ${
-                        user.role === 'Admin' ? 'bg-purple-100 text-purple-800' :
-                        user.role === 'Teacher' ? 'bg-blue-100 text-blue-800' :
-                        'bg-green-100 text-green-800'
-                      }`}>
-                        {user.role}
-                      </span>
-                    </td>
+                    <span
+                      className={`px-2 py-1 text-xs font-medium rounded-full ${
+                        Number(user.role) === 0
+                          ? 'bg-purple-100 text-purple-800'
+                          : Number(user.role) === 1
+                          ? 'bg-blue-100 text-blue-800'
+                          : 'bg-green-100 text-green-800'
+                      }`}
+                    >
+                      {Number(user.role) === 0
+                        ? 'Admin'
+                        : Number(user.role) === 1
+                        ? 'Teacher '
+                        : 'Student '}
+                    </span>
+                  </td>
                     <td className="px-6 py-4 whitespace-nowrap">
                       <span className={`px-2 py-1 text-xs font-medium rounded-full ${
                         user.isActive ? 'bg-success-100 text-success-800' : 'bg-danger-100 text-danger-800'

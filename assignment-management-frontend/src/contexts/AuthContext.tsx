@@ -19,7 +19,7 @@ interface AuthContextType {
   token: string | null;
   isAuthenticated: boolean;
   isLoading: boolean;
-  login: (credentials: LoginRequest) => Promise<void>;
+  login: (credentials: LoginRequest) => Promise<User>; // Promise<void> তুলে Promise<User> দিন
   logout: () => void;
   updateUser: (data: Partial<User>) => void;
 }
@@ -55,27 +55,43 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     initializeAuth();
   }, []);
 
-  const login = useCallback(async (credentials: LoginRequest) => {
-    const response = await apiClient.post<LoginResponse>('/auth/login', credentials);
+ const login = useCallback(async (credentials: LoginRequest): Promise<User> => {
+  const response = await apiClient.post<LoginResponse>('/auth/login', credentials);
 
-    const userData: User = {
-      id: response.userId,
-      username: response.username,
-      email: response.email,
-      role: response.role,
-      firstName: response.firstName,
-      lastName: response.lastName,
-      isActive: true,
-      createdAt: new Date().toISOString(),
-      fullName: `${response.firstName} ${response.lastName}`,
-    };
+  const userData: User = {
+    id: response.userId,
+    username: response.username,
+    email: response.email,
+    role: response.role,
+    firstName: response.firstName,
+    lastName: response.lastName,
+    isActive: true,
+    createdAt: new Date().toISOString(),
+    fullName: `${response.firstName} ${response.lastName}`,
+  };
 
-    setToken(response.token);
-    setUser(userData);
+  setToken(response.token);
+  setUser(userData);
 
-    localStorage.setItem('token', response.token);
-    localStorage.setItem('user', JSON.stringify(userData));
-  }, []);
+  localStorage.setItem('token', response.token);
+  localStorage.setItem('user', JSON.stringify(userData));
+
+  if (response.role === 'Admin') {
+    router.push('/admin');
+  }
+  else if (response.role === 'Teacher') {
+    router.push('/teacher');
+  }
+
+  else if (response.role === 'Student') {
+    router.push('/student');
+  }
+
+  // middleware.ts এর সুবিধার্থে Cookie তে টোকেন সেট করা
+  document.cookie = `token=${response.token}; path=/; max-age=86400`;
+
+  return userData; // userData রিটার্ন করা হলো যেন LoginForm সরাসরি পায়
+}, []);
 
   const logout = useCallback(() => {
     setToken(null);
