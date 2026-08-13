@@ -23,4 +23,7 @@ public interface IAssignmentService
     Task<AssignmentDto> CloseAssignmentAsync(Guid id, Guid teacherId);
     Task<DashboardStatsDto> GetTeacherDashboardStatsAsync(Guid teacherId);
     Task<bool> IsAssignmentExistsAsync(Guid id);
+    Task<IEnumerable<ClassDto>> GetTeacherClassesAsync(Guid teacherId);
+
+
 }

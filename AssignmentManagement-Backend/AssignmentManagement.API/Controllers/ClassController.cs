@@ -266,5 +266,42 @@ namespace AssignmentManagement.API.Controllers
                 return StatusCode(500, new { message = "An error occurred" });
             }
         }
+
+        // GET: api/teachers/me/classes
+        [HttpGet("~/api/teachers/me/classes")]
+        [Authorize(Roles = "Teacher")]
+        public async Task<ActionResult<IEnumerable<ClassDto>>> GetTeacherClasses()
+        {
+            try
+            {
+                var teacherIdClaim = User.FindFirst(
+                    System.Security.Claims.ClaimTypes.NameIdentifier
+                )?.Value;
+
+                if (!Guid.TryParse(teacherIdClaim, out var teacherId))
+                {
+                    return Unauthorized(new { message = "Invalid teacher identity" });
+                }
+
+                var classes = await _classService.GetTeacherClassesAsync(teacherId);
+
+                return Ok(classes);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error getting teacher classes");
+
+                return StatusCode(500, new
+                {
+                    message = "An error occurred while fetching teacher classes"
+                });
+            }
+        }
+
+
+
+
     }
+
+
 }

@@ -1,4 +1,7 @@
 // Application/DTOs/SubmissionDto.cs
+using AssignmentManagement.Application.DTOs;
+
+
 namespace AssignmentManagement.Application.DTOs
 {
     public class SubmissionDto
@@ -14,6 +17,9 @@ namespace AssignmentManagement.Application.DTOs
         public int? Marks { get; set; }
         public int? MaximumMarks { get; set; }
         public string? Feedback { get; set; }
+        public string? Strengths { get; set; }
+        public string? AreasForImprovement { get; set; }
+        public string? Grade { get; set; }
         public DateTime SubmittedAt { get; set; }
         public DateTime? UpdatedAt { get; set; }
         public DateTime? GradedAt { get; set; }

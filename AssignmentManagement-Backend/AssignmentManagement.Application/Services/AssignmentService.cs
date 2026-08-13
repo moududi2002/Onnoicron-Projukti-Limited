@@ -323,5 +323,29 @@ namespace AssignmentManagement.Application.Services
         {
             return await _context.Assignments.AnyAsync(a => a.Id == id);
         }
+
+        public async Task<IEnumerable<ClassDto>> GetTeacherClassesAsync(Guid teacherId)
+        {
+            var classes = await _context.Classes
+                .Include(c => c.StudentClasses)
+                .Include(c => c.Subjects)
+                .Where(c => c.Subjects.Any(s =>
+                    s.TeacherAssignments.Any(ta => ta.TeacherId == teacherId)))
+                .OrderBy(c => c.Name)
+                .ToListAsync();
+
+            return classes.Select(c => new ClassDto
+            {
+                Id = c.Id,
+                Name = c.Name,
+                Description = c.Description,
+                AcademicYear = c.AcademicYear,
+                IsActive = c.IsActive,
+                StudentCount = c.StudentClasses.Count,
+                SubjectCount = c.Subjects.Count,
+                CreatedAt = c.CreatedAt
+            });
+        }
+
     }
 }

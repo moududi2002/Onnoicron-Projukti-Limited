@@ -23,10 +23,11 @@ namespace AssignmentManagement.Application.Services
             Guid? classId = null,
             string? searchTerm = null,
             bool? isActive = null,
-            int page = 1, 
+            int page = 1,
             int limit = 10)
         {
-            var query = _context.Subjects
+            // Added AsNoTracking() for better performance on read-only queries
+            var query = _context.Subjects.AsNoTracking()
                 .Include(s => s.Class)
                 .Include(s => s.TeacherAssignments)
                 .AsQueryable();
@@ -34,12 +35,12 @@ namespace AssignmentManagement.Application.Services
             if (classId.HasValue)
                 query = query.Where(s => s.ClassId == classId.Value);
 
-            if (!string.IsNullOrEmpty(searchTerm))
+            if (!string.IsNullOrWhiteSpace(searchTerm))
             {
-                searchTerm = searchTerm.ToLower();
-                query = query.Where(s => 
-                    s.Name.ToLower().Contains(searchTerm) || 
-                    s.Code.ToLower().Contains(searchTerm));
+                var lowerSearchTerm = searchTerm.ToLower();
+                query = query.Where(s =>
+                    s.Name.ToLower().Contains(lowerSearchTerm) ||
+                    s.Code.ToLower().Contains(lowerSearchTerm));
             }
 
             if (isActive.HasValue)
@@ -48,7 +49,7 @@ namespace AssignmentManagement.Application.Services
             var total = await query.CountAsync();
 
             var subjects = await query
-                .OrderBy(s => s.Class.Name)
+                .OrderBy(s => s.Class!.Name)
                 .ThenBy(s => s.Name)
                 .Skip((page - 1) * limit)
                 .Take(limit)
@@ -65,7 +66,7 @@ namespace AssignmentManagement.Application.Services
 
         public async Task<SubjectDto> GetSubjectByIdAsync(Guid id)
         {
-            var subject = await _context.Subjects
+            var subject = await _context.Subjects.AsNoTracking()
                 .Include(s => s.Class)
                 .Include(s => s.TeacherAssignments)
                 .FirstOrDefaultAsync(s => s.Id == id);
@@ -78,11 +79,9 @@ namespace AssignmentManagement.Application.Services
 
         public async Task<SubjectDto> CreateSubjectAsync(CreateSubjectDto dto)
         {
-            // Check if class exists
             if (!await _context.Classes.AnyAsync(c => c.Id == dto.ClassId))
                 throw new KeyNotFoundException("Class not found");
 
-            // Check if subject code already exists for the class
             var exists = await _context.Subjects
                 .AnyAsync(s => s.Code.ToLower() == dto.Code.ToLower() && s.ClassId == dto.ClassId);
 
@@ -101,7 +100,7 @@ namespace AssignmentManagement.Application.Services
             _context.Subjects.Add(subject);
             await _context.SaveChangesAsync();
 
-            _logger.LogInformation($"Subject created: {subject.Name} (Code: {subject.Code})");
+            _logger.LogInformation("Subject created: {SubjectName} (Code: {SubjectCode})", subject.Name, subject.Code);
 
             return await GetSubjectByIdAsync(subject.Id);
         }
@@ -112,14 +111,14 @@ namespace AssignmentManagement.Application.Services
             if (subject == null)
                 throw new KeyNotFoundException("Subject not found");
 
-            if (dto.Name != null)
+            if (!string.IsNullOrWhiteSpace(dto.Name))
                 subject.Name = dto.Name;
 
-            if (dto.Code != null)
+            if (!string.IsNullOrWhiteSpace(dto.Code))
             {
                 var exists = await _context.Subjects
-                    .AnyAsync(s => s.Code.ToLower() == dto.Code.ToLower() && 
-                                   s.ClassId == (dto.ClassId ?? subject.ClassId) && 
+                    .AnyAsync(s => s.Code.ToLower() == dto.Code.ToLower() &&
+                                   s.ClassId == (dto.ClassId ?? subject.ClassId) &&
                                    s.Id != id);
 
                 if (exists)
@@ -141,7 +140,7 @@ namespace AssignmentManagement.Application.Services
 
             await _context.SaveChangesAsync();
 
-            _logger.LogInformation($"Subject updated: {subject.Name} (ID: {id})");
+            _logger.LogInformation("Subject updated: {SubjectName} (ID: {SubjectId})", subject.Name, id);
 
             return await GetSubjectByIdAsync(id);
         }
@@ -165,7 +164,7 @@ namespace AssignmentManagement.Application.Services
             _context.Subjects.Remove(subject);
             await _context.SaveChangesAsync();
 
-            _logger.LogInformation($"Subject deleted: {subject.Name} (ID: {id})");
+            _logger.LogInformation("Subject deleted: {SubjectName} (ID: {SubjectId})", subject.Name, id);
         }
 
         public async Task<bool> ToggleSubjectStatusAsync(Guid id)
@@ -177,14 +176,14 @@ namespace AssignmentManagement.Application.Services
             subject.IsActive = !subject.IsActive;
             await _context.SaveChangesAsync();
 
-            _logger.LogInformation($"Subject status toggled: {subject.Name}, Active: {subject.IsActive}");
+            _logger.LogInformation("Subject status toggled: {SubjectName}, Active: {IsActive}", subject.Name, subject.IsActive);
 
             return subject.IsActive;
         }
 
         public async Task<IEnumerable<SubjectDto>> GetSubjectsByClassAsync(Guid classId)
         {
-            var subjects = await _context.Subjects
+            var subjects = await _context.Subjects.AsNoTracking()
                 .Include(s => s.Class)
                 .Include(s => s.TeacherAssignments)
                 .Where(s => s.ClassId == classId && s.IsActive)
@@ -196,7 +195,7 @@ namespace AssignmentManagement.Application.Services
 
         public async Task<IEnumerable<SubjectDto>> GetTeacherSubjectsAsync(Guid teacherId)
         {
-            var subjects = await _context.TeacherAssignments
+            var subjects = await _context.TeacherAssignments.AsNoTracking()
                 .Where(ta => ta.TeacherId == teacherId)
                 .Include(ta => ta.Subject)
                     .ThenInclude(s => s.Class)
@@ -218,8 +217,8 @@ namespace AssignmentManagement.Application.Services
             if (!await _context.Subjects.AnyAsync(s => s.Id == subjectId))
                 throw new KeyNotFoundException("Subject not found");
 
-            var teacher = await _context.Users.FirstOrDefaultAsync(u => u.Id == teacherId && u.Role == UserRole.Teacher);
-            if (teacher == null)
+            var teacherExists = await _context.Users.AnyAsync(u => u.Id == teacherId && u.Role == UserRole.Teacher);
+            if (!teacherExists)
                 throw new KeyNotFoundException("Teacher not found");
 
             var alreadyAssigned = await _context.TeacherAssignments
@@ -238,7 +237,7 @@ namespace AssignmentManagement.Application.Services
             _context.TeacherAssignments.Add(teacherAssignment);
             await _context.SaveChangesAsync();
 
-            _logger.LogInformation($"Teacher {teacherId} assigned to subject {subjectId}");
+            _logger.LogInformation("Teacher {TeacherId} assigned to subject {SubjectId}", teacherId, subjectId);
         }
 
         public async Task RemoveTeacherFromSubjectAsync(Guid subjectId, Guid teacherId)
@@ -249,7 +248,6 @@ namespace AssignmentManagement.Application.Services
             if (teacherAssignment == null)
                 throw new KeyNotFoundException("Teacher is not assigned to this subject");
 
-            // Check if teacher has assignments for this subject
             var hasAssignments = await _context.Assignments
                 .AnyAsync(a => a.SubjectId == subjectId && a.CreatedById == teacherId);
 
@@ -259,12 +257,12 @@ namespace AssignmentManagement.Application.Services
             _context.TeacherAssignments.Remove(teacherAssignment);
             await _context.SaveChangesAsync();
 
-            _logger.LogInformation($"Teacher {teacherId} removed from subject {subjectId}");
+            _logger.LogInformation("Teacher {TeacherId} removed from subject {SubjectId}", teacherId, subjectId);
         }
 
         public async Task<IEnumerable<UserDto>> GetTeachersBySubjectAsync(Guid subjectId)
         {
-            var teachers = await _context.TeacherAssignments
+            var teachers = await _context.TeacherAssignments.AsNoTracking()
                 .Where(ta => ta.SubjectId == subjectId)
                 .Include(ta => ta.Teacher)
                 .Select(ta => ta.Teacher)
@@ -285,6 +283,116 @@ namespace AssignmentManagement.Application.Services
             });
         }
 
+        public async Task<IEnumerable<TeacherAssignmentDto>> GetAllTeacherAssignmentsAsync()
+        {
+            var assignments = await _context.TeacherAssignments.AsNoTracking()
+                .Include(ta => ta.Teacher)
+                .Include(ta => ta.Subject)
+                    .ThenInclude(s => s.Class)
+                .OrderBy(ta => ta.Subject.Name)
+                .ToListAsync();
+
+            return assignments.Select(MapToTeacherAssignmentDto);
+        }
+
+        public async Task<TeacherAssignmentDto> GetTeacherAssignmentByIdAsync(Guid subjectId, Guid teacherId)
+        {
+            var assignment = await _context.TeacherAssignments.AsNoTracking()
+                .Include(ta => ta.Teacher)
+                .Include(ta => ta.Subject)
+                    .ThenInclude(s => s.Class)
+                .FirstOrDefaultAsync(ta => ta.SubjectId == subjectId && ta.TeacherId == teacherId);
+
+            if (assignment == null)
+                throw new KeyNotFoundException("Teacher assignment not found");
+
+            return MapToTeacherAssignmentDto(assignment);
+        }
+
+        public async Task<IEnumerable<TeacherAssignmentDto>> GetTeacherAssignmentsBySubjectAsync(Guid subjectId)
+        {
+            var assignments = await _context.TeacherAssignments.AsNoTracking()
+                .Include(ta => ta.Teacher)
+                .Include(ta => ta.Subject)
+                    .ThenInclude(s => s.Class)
+                .Where(ta => ta.SubjectId == subjectId)
+                .OrderBy(ta => ta.Teacher.FirstName)
+                .ToListAsync();
+
+            return assignments.Select(MapToTeacherAssignmentDto);
+        }
+
+        public async Task<IEnumerable<TeacherAssignmentDto>> GetTeacherAssignmentsByTeacherAsync(Guid teacherId)
+        {
+            var assignments = await _context.TeacherAssignments.AsNoTracking()
+                .Include(ta => ta.Teacher)
+                .Include(ta => ta.Subject)
+                    .ThenInclude(s => s.Class)
+                .Where(ta => ta.TeacherId == teacherId)
+                .OrderBy(ta => ta.Subject.Name)
+                .ToListAsync();
+
+            return assignments.Select(MapToTeacherAssignmentDto);
+        }
+
+        // Overload 1: Changes the Subject for a specific Teacher Assignment
+        public async Task UpdateTeacherAssignmentAsync(Guid subjectId, Guid teacherId, UpdateTeacherAssignmentDto dto)
+        {
+            var teacherAssignment = await _context.TeacherAssignments
+                .FirstOrDefaultAsync(ta => ta.SubjectId == subjectId && ta.TeacherId == teacherId);
+
+            if (teacherAssignment == null)
+                throw new KeyNotFoundException("Teacher assignment not found");
+
+            if (dto.NewSubjectId.HasValue && dto.NewSubjectId.Value != subjectId)
+            {
+                var newSubjectExists = await _context.Subjects.AnyAsync(s => s.Id == dto.NewSubjectId.Value);
+                if (!newSubjectExists)
+                    throw new KeyNotFoundException("New subject not found");
+
+                teacherAssignment.SubjectId = dto.NewSubjectId.Value;
+            }
+
+            await _context.SaveChangesAsync();
+            _logger.LogInformation("Teacher {TeacherId} assignment updated for subject {SubjectId}", teacherId, subjectId);
+        }
+
+        // Overload 2: Changes the Teacher for a specific Subject Assignment
+        public async Task UpdateTeacherAssignmentAsync(Guid subjectId, Guid oldTeacherId, Guid newTeacherId)
+        {
+            var existingAssignment = await _context.TeacherAssignments
+                .FirstOrDefaultAsync(ta => ta.SubjectId == subjectId && ta.TeacherId == oldTeacherId);
+
+            if (existingAssignment == null)
+                throw new KeyNotFoundException("Teacher assignment not found");
+
+            var newTeacherExists = await _context.Users
+                .AnyAsync(u => u.Id == newTeacherId && u.Role == UserRole.Teacher);
+
+            if (!newTeacherExists)
+                throw new KeyNotFoundException("New teacher not found");
+
+            var alreadyAssigned = await _context.TeacherAssignments
+                .AnyAsync(ta => ta.SubjectId == subjectId && ta.TeacherId == newTeacherId && ta.TeacherId != oldTeacherId);
+
+            if (alreadyAssigned)
+                throw new InvalidOperationException("New teacher is already assigned to this subject");
+
+            var hasAssignments = await _context.Assignments
+                .AnyAsync(a => a.SubjectId == subjectId && a.CreatedById == oldTeacherId);
+
+            if (hasAssignments)
+                throw new InvalidOperationException("Cannot reassign teacher with existing assignments");
+
+            existingAssignment.TeacherId = newTeacherId;
+            existingAssignment.AssignedAt = DateTime.UtcNow;
+
+            await _context.SaveChangesAsync();
+            _logger.LogInformation("Teacher assignment updated for subject {SubjectId}: {OldTeacherId} -> {NewTeacherId}", subjectId, oldTeacherId, newTeacherId);
+        }
+
+        #region Private Mapping Helpers
+
         private static SubjectDto MapToDto(Subject subject)
         {
             return new SubjectDto
@@ -298,5 +406,24 @@ namespace AssignmentManagement.Application.Services
                 TeacherCount = subject.TeacherAssignments?.Count ?? 0
             };
         }
+
+        private static TeacherAssignmentDto MapToTeacherAssignmentDto(TeacherAssignment ta)
+        {
+            return new TeacherAssignmentDto
+            {
+                TeacherId = ta.TeacherId,
+                TeacherName = $"{ta.Teacher.FirstName} {ta.Teacher.LastName}".Trim(),
+                TeacherEmail = ta.Teacher.Email,
+                SubjectId = ta.SubjectId,
+                SubjectName = ta.Subject.Name,
+                SubjectCode = ta.Subject.Code,
+                ClassId = ta.Subject.ClassId,
+                ClassName = ta.Subject.Class?.Name ?? "N/A",
+                AssignedAt = ta.AssignedAt,
+                IsActive = ta.Subject.IsActive
+            };
+        }
+
+        #endregion
     }
 }

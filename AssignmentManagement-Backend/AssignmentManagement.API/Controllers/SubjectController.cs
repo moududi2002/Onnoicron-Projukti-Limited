@@ -289,5 +289,75 @@ namespace AssignmentManagement.API.Controllers
                 return StatusCode(500, new { message = "An error occurred" });
             }
         }
+
+        // PUT: api/subject/{id}/update-teacher/{teacherId}
+        [HttpPut("{id}/update-teacher/{teacherId}")]
+        [Authorize(Roles = "Admin")]
+        public async Task<IActionResult> UpdateTeacherAssignment(Guid id, Guid teacherId, [FromBody] UpdateTeacherAssignmentDto dto)
+        {
+            try
+            {
+                await _subjectService.UpdateTeacherAssignmentAsync(id, teacherId, dto);
+                return Ok(new { message = "Teacher assignment updated successfully" });
+            }
+            catch (KeyNotFoundException ex)
+            {
+                return NotFound(new { message = ex.Message });
+            }
+            catch (InvalidOperationException ex)
+            {
+                return BadRequest(new { message = ex.Message });
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, $"Error updating teacher assignment for subject {id}");
+                return StatusCode(500, new { message = "An error occurred" });
+            }
+        }
+
+        // Add these endpoints to SubjectController
+
+            // GET: api/subject/teacher-assignments/all
+            [HttpGet("teacher-assignments/all")]
+            [Authorize(Roles = "Admin")]
+            public async Task<ActionResult<IEnumerable<TeacherAssignmentDto>>> GetAllTeacherAssignments()
+            {
+                try
+                {
+                    var assignments = await _subjectService.GetAllTeacherAssignmentsAsync();
+                    return Ok(assignments);
+                }
+                catch (Exception ex)
+                {
+                    _logger.LogError(ex, "Error getting all teacher assignments");
+                    return StatusCode(500, new { message = "An error occurred" });
+                }
+            }
+
+            // PUT: api/subject/{subjectId}/update-teacher/{oldTeacherId}/{newTeacherId}
+            [HttpPut("{subjectId}/update-teacher/{oldTeacherId}/{newTeacherId}")]
+            [Authorize(Roles = "Admin")]
+            public async Task<IActionResult> UpdateTeacherAssignment(
+                Guid subjectId, Guid oldTeacherId, Guid newTeacherId)
+            {
+                try
+                {
+                    await _subjectService.UpdateTeacherAssignmentAsync(subjectId, oldTeacherId, newTeacherId);
+                    return Ok(new { message = "Teacher assignment updated successfully" });
+                }
+                catch (KeyNotFoundException ex)
+                {
+                    return NotFound(new { message = ex.Message });
+                }
+                catch (InvalidOperationException ex)
+                {
+                    return BadRequest(new { message = ex.Message });
+                }
+                catch (Exception ex)
+                {
+                    _logger.LogError(ex, $"Error updating teacher assignment for subject {subjectId}");
+                    return StatusCode(500, new { message = "An error occurred" });
+                }
+            }
     }
 }

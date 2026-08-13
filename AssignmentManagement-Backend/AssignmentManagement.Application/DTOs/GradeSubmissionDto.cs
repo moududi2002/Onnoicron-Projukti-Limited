@@ -13,10 +13,16 @@ namespace AssignmentManagement.Application.DTOs
         [StringLength(2000, ErrorMessage = "Feedback cannot exceed 2000 characters")]
         public string? Feedback { get; set; }
 
+        [StringLength(500, ErrorMessage = "Strengths cannot exceed 500 characters")]
+        public string? Strengths { get; set; }
+
+        [StringLength(500, ErrorMessage = "Areas for improvement cannot exceed 500 characters")]
+        public string? AreasForImprovement { get; set; }
+
+        [StringLength(10, ErrorMessage = "Grade cannot exceed 10 characters")]
+        public string? Grade { get; set; }
+
         [Required(ErrorMessage = "Status is required")]
         public SubmissionStatus Status { get; set; } = SubmissionStatus.Graded;
-
-        [EmailAddress]
-        public string? NotifyStudent { get; set; } // If true, send email notification
     }
 }

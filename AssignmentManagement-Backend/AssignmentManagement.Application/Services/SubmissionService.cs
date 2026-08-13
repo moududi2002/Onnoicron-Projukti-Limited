@@ -29,14 +29,12 @@ namespace AssignmentManagement.Application.Services
             if (assignment.Status != AssignmentStatus.Published)
                 throw new InvalidOperationException("Cannot submit to an unpublished assignment");
 
-            // Check if student belongs to the class
             var isStudentInClass = await _context.StudentClasses
                 .AnyAsync(sc => sc.StudentId == studentId && sc.ClassId == assignment.ClassId);
 
             if (!isStudentInClass)
                 throw new UnauthorizedAccessException("You are not enrolled in this class");
 
-            // Check for existing submission
             var existingSubmission = await _context.Submissions
                 .FirstOrDefaultAsync(s => s.AssignmentId == dto.AssignmentId && s.StudentId == studentId);
 
@@ -79,14 +77,12 @@ namespace AssignmentManagement.Application.Services
             if (submission.Status == SubmissionStatus.Graded)
                 throw new InvalidOperationException("Cannot update a graded submission");
 
-            // Check deadline
             if (DateTime.UtcNow > submission.Assignment.Deadline)
                 throw new InvalidOperationException("Cannot update submission after deadline");
 
             submission.Content = dto.Content;
             submission.UpdatedAt = DateTime.UtcNow;
 
-            // Remove attachments that are not in the keep list
             if (dto.KeepAttachmentIds != null)
             {
                 var attachmentsToRemove = submission.Attachments
@@ -123,12 +119,16 @@ namespace AssignmentManagement.Application.Services
 
             submission.Marks = dto.Marks;
             submission.Feedback = dto.Feedback;
+            submission.Strengths = dto.Strengths;
+            submission.AreasForImprovement = dto.AreasForImprovement;
+            submission.Grade = dto.Grade;
             submission.Status = dto.Status;
             submission.GradedAt = DateTime.UtcNow;
+            submission.UpdatedAt = DateTime.UtcNow;
 
             await _context.SaveChangesAsync();
 
-            _logger.LogInformation($"Submission {id} graded by teacher {teacherId}. Marks: {dto.Marks}, Status: {dto.Status}");
+            _logger.LogInformation($"Submission {id} graded by teacher {teacherId}. Marks: {dto.Marks}, Feedback: {dto.Feedback}");
 
             return await GetSubmissionByIdAsync(submission.Id);
         }
@@ -221,63 +221,25 @@ namespace AssignmentManagement.Application.Services
             };
         }
 
-
         public async Task<bool> CanSubmitAssignmentAsync(Guid assignmentId, Guid studentId)
         {
-            // Check if assignment exists and is published
             var assignment = await _context.Assignments.FindAsync(assignmentId);
-            if (assignment == null || assignment.Status != Domain.Entities.AssignmentStatus.Published)
+            if (assignment == null || assignment.Status != AssignmentStatus.Published)
                 return false;
 
-            // Check if student is enrolled in the class
             var isEnrolled = await _context.StudentClasses
                 .AnyAsync(sc => sc.StudentId == studentId && sc.ClassId == assignment.ClassId);
             
             if (!isEnrolled)
                 return false;
 
-            // Check if already submitted
             var alreadySubmitted = await _context.Submissions
                 .AnyAsync(s => s.AssignmentId == assignmentId && s.StudentId == studentId);
             
             if (alreadySubmitted)
                 return false;
 
-            // Check if deadline has passed
-            if (DateTime.UtcNow > assignment.Deadline && assignment.Status != Domain.Entities.AssignmentStatus.Closed)
-                return true; // Allow late submission but mark it
-
             return true;
-        }
-
-        private static SubmissionDto MapToDto(Submission submission)
-        {
-            return new SubmissionDto
-            {
-                Id = submission.Id,
-                AssignmentId = submission.AssignmentId,
-                AssignmentTitle = submission.Assignment?.Title,
-                StudentId = submission.StudentId,
-                StudentName = $"{submission.Student?.FirstName} {submission.Student?.LastName}",
-                StudentEmail = submission.Student?.Email,
-                Content = submission.Content,
-                Status = submission.Status.ToString(),
-                Marks = submission.Marks,
-                MaximumMarks = submission.Assignment?.MaximumMarks,
-                Feedback = submission.Feedback,
-                SubmittedAt = submission.SubmittedAt,
-                UpdatedAt = submission.UpdatedAt,
-                GradedAt = submission.GradedAt,
-                Attachments = submission.Attachments?.Select(a => new AttachmentDto
-                {
-                    Id = a.Id,
-                    FileName = a.FileName,
-                    FileUrl = a.FileUrl,
-                    ContentType = a.ContentType,
-                    FileSize = a.FileSize,
-                    UploadedAt = a.UploadedAt
-                }).ToList() ?? new List<AttachmentDto>()
-            };
         }
 
         public async Task<PaginatedResponseDto<SubmissionDto>> GetAllSubmissionsAsync(
@@ -294,19 +256,15 @@ namespace AssignmentManagement.Application.Services
                 .Include(s => s.Attachments)
                 .AsQueryable();
 
-            // Filter by status
             if (!string.IsNullOrEmpty(status) && Enum.TryParse<SubmissionStatus>(status, out var statusEnum))
                 query = query.Where(s => s.Status == statusEnum);
 
-            // Filter by assignment
             if (assignmentId.HasValue)
                 query = query.Where(s => s.AssignmentId == assignmentId.Value);
 
-            // Filter by student
             if (studentId.HasValue)
                 query = query.Where(s => s.StudentId == studentId.Value);
 
-            // Search by student name or assignment title
             if (!string.IsNullOrEmpty(searchTerm))
             {
                 searchTerm = searchTerm.ToLower();
@@ -329,6 +287,39 @@ namespace AssignmentManagement.Application.Services
                 Total = total,
                 Page = page,
                 Limit = limit
+            };
+        }
+
+        private static SubmissionDto MapToDto(Submission submission)
+        {
+            return new SubmissionDto
+            {
+                Id = submission.Id,
+                AssignmentId = submission.AssignmentId,
+                AssignmentTitle = submission.Assignment?.Title,
+                StudentId = submission.StudentId,
+                StudentName = $"{submission.Student?.FirstName} {submission.Student?.LastName}",
+                StudentEmail = submission.Student?.Email,
+                Content = submission.Content,
+                Status = submission.Status.ToString(),
+                Marks = submission.Marks,
+                MaximumMarks = submission.Assignment?.MaximumMarks,
+                Feedback = submission.Feedback,
+                Strengths = submission.Strengths,
+                AreasForImprovement = submission.AreasForImprovement,
+                Grade = submission.Grade,
+                SubmittedAt = submission.SubmittedAt,
+                UpdatedAt = submission.UpdatedAt,
+                GradedAt = submission.GradedAt,
+                Attachments = submission.Attachments?.Select(a => new AttachmentDto
+                {
+                    Id = a.Id,
+                    FileName = a.FileName,
+                    FileUrl = a.FileUrl,
+                    ContentType = a.ContentType,
+                    FileSize = a.FileSize,
+                    UploadedAt = a.UploadedAt
+                }).ToList() ?? new List<AttachmentDto>()
             };
         }
     }

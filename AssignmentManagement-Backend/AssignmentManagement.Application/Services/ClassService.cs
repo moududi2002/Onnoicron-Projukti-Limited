@@ -172,10 +172,14 @@ namespace AssignmentManagement.Application.Services
             return classEntity.IsActive;
         }
 
-        public async Task<IEnumerable<ClassDto>> GetActiveClassesAsync()
+        public async Task<IEnumerable<ClassDto>> GetTeacherClassesAsync(Guid teacherId)
         {
+        
             var classes = await _context.Classes
-                .Where(c => c.IsActive)
+                .Include(c => c.StudentClasses)
+                .Include(c => c.Subjects)
+                .Where(c => c.Subjects.Any(s =>
+                    s.TeacherAssignments.Any(ta => ta.TeacherId == teacherId)))
                 .OrderBy(c => c.Name)
                 .ToListAsync();
 
@@ -282,5 +286,49 @@ namespace AssignmentManagement.Application.Services
                 CreatedAt = classEntity.CreatedAt
             };
         }
+
+        public async Task<IEnumerable<SubjectDto>> GetTeacherSubjectsByClassAsync(
+        Guid teacherId,
+        Guid classId)
+        {
+            var subjects = await _context.Subjects
+                .Include(s => s.Class)
+                .Include(s => s.TeacherAssignments)
+                .Where(s =>
+                    s.ClassId == classId &&
+                    s.TeacherAssignments.Any(ta =>
+                        ta.TeacherId == teacherId))
+                .ToListAsync();
+
+            return subjects.Select(s => new SubjectDto
+            {
+                Id = s.Id,
+                Name = s.Name,
+                Code = s.Code,
+                ClassId = s.ClassId,
+                ClassName = s.Class.Name,
+                IsActive = s.IsActive,
+                TeacherCount = s.TeacherAssignments.Count
+            });
+        }
+
+        public async Task<IEnumerable<ClassDto>> GetActiveClassesAsync()
+            {
+                var classes = await _context.Classes
+                    .Include(c => c.StudentClasses)
+                    .Include(c => c.Subjects)
+                    .Where(c => c.IsActive)
+                    .OrderBy(c => c.Name)
+                    .ToListAsync();
+
+                return classes.Select(MapToDto);
+            }
+
+       
+
+
+
+
+
     }
 }
