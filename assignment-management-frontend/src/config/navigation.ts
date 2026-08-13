@@ -1,7 +1,7 @@
 // src/config/navigation.ts
 import {
   HiHome, HiUsers, HiAcademicCap, HiBookOpen,
-  HiClipboardList, HiDocumentText, HiCog, HiUser,
+  HiClipboardList, HiDocumentText, HiCog, HiUser,HiUserGroup,
 } from 'react-icons/hi';
 
 export interface NavItem {
@@ -39,6 +39,18 @@ export const navigation: NavItem[] = [
     label: 'Subjects',
     href: '/admin/subjects',
     icon: HiBookOpen,
+    roles: ['Admin'],
+  },
+  {
+    label: 'Assign Teachers',
+    href: '/admin/assign-teacher',
+    icon: HiUserGroup,
+    roles: ['Admin'],
+  },
+  {
+    label: 'All Submissions',
+    href: '/admin/submissions',
+    icon: HiDocumentText,
     roles: ['Admin'],
   },
   {

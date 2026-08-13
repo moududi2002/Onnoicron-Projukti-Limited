@@ -2,9 +2,13 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
 import { apiClient } from '@/services/api-client';
 import { DashboardStats } from '@/types';
-import { HiUsers, HiAcademicCap, HiBookOpen, HiClipboardList } from 'react-icons/hi';
+import { 
+  HiUsers, HiAcademicCap, HiBookOpen, HiClipboardList, 
+  HiDocumentText, HiCheckCircle, HiClock, HiUserGroup 
+} from 'react-icons/hi';
 
 export default function AdminDashboardPage() {
   const [stats, setStats] = useState<DashboardStats | null>(null);
@@ -34,42 +38,14 @@ export default function AdminDashboardPage() {
   }
 
   const statCards = [
-    {
-      name: 'Total Users',
-      value: stats?.totalUsers || 0,
-      icon: HiUsers,
-      color: 'bg-primary-500',
-    },
-    {
-      name: 'Total Students',
-      value: stats?.totalStudents || 0,
-      icon: HiUsers,
-      color: 'bg-success-500',
-    },
-    {
-      name: 'Total Teachers',
-      value: stats?.totalTeachers || 0,
-      icon: HiAcademicCap,
-      color: 'bg-warning-500',
-    },
-    {
-      name: 'Total Classes',
-      value: stats?.totalClasses || 0,
-      icon: HiBookOpen,
-      color: 'bg-danger-500',
-    },
-    {
-      name: 'Total Subjects',
-      value: stats?.totalSubjects || 0,
-      icon: HiBookOpen,
-      color: 'bg-indigo-500',
-    },
-    {
-      name: 'Total Assignments',
-      value: stats?.totalAssignments || 0,
-      icon: HiClipboardList,
-      color: 'bg-purple-500',
-    },
+    { name: 'Total Users', value: stats?.totalUsers || 0, icon: HiUsers, color: 'bg-primary-500', href: '/admin/users' },
+    { name: 'Total Students', value: stats?.totalStudents || 0, icon: HiUsers, color: 'bg-success-500', href: '/admin/users' },
+    { name: 'Total Teachers', value: stats?.totalTeachers || 0, icon: HiAcademicCap, color: 'bg-warning-500', href: '/admin/users' },
+    { name: 'Total Classes', value: stats?.totalClasses || 0, icon: HiBookOpen, color: 'bg-danger-500', href: '/admin/classes' },
+    { name: 'Total Subjects', value: stats?.totalSubjects || 0, icon: HiBookOpen, color: 'bg-indigo-500', href: '/admin/subjects' },
+    { name: 'All Assignments', value: stats?.totalAssignments || 0, icon: HiClipboardList, color: 'bg-purple-500', href: '/admin/assignments' },
+    { name: 'All Submissions', value: stats?.totalSubmissions || 0, icon: HiDocumentText, color: 'bg-cyan-500', href: '/admin/submissions' },
+    { name: 'Pending Grading', value: stats?.pendingGrading || 0, icon: HiClock, color: 'bg-orange-500', href: '/admin/submissions' },
   ];
 
   return (
@@ -82,9 +58,9 @@ export default function AdminDashboardPage() {
       </div>
 
       {/* Stats Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {statCards.map((stat) => (
-          <div key={stat.name} className="bg-white rounded-lg shadow p-6">
+          <Link key={stat.name} href={stat.href} className="bg-white rounded-lg shadow p-6 hover:shadow-md transition-shadow">
             <div className="flex items-center">
               <div className={`${stat.color} p-3 rounded-lg`}>
                 <stat.icon className="h-6 w-6 text-white" />
@@ -94,8 +70,47 @@ export default function AdminDashboardPage() {
                 <p className="text-2xl font-bold text-gray-900">{stat.value}</p>
               </div>
             </div>
-          </div>
+          </Link>
         ))}
+      </div>
+
+      {/* Quick Actions */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <Link href="/admin/assign-teacher" className="bg-white rounded-lg shadow p-6 hover:shadow-md transition-shadow">
+          <div className="flex items-center space-x-3">
+            <div className="bg-blue-500 p-3 rounded-lg">
+              <HiUserGroup className="h-6 w-6 text-white" />
+            </div>
+            <div>
+              <h3 className="font-medium text-gray-900">Assign Teachers</h3>
+              <p className="text-sm text-gray-500">Assign teachers to subjects & classes</p>
+            </div>
+          </div>
+        </Link>
+
+        <Link href="/admin/assignments" className="bg-white rounded-lg shadow p-6 hover:shadow-md transition-shadow">
+          <div className="flex items-center space-x-3">
+            <div className="bg-purple-500 p-3 rounded-lg">
+              <HiClipboardList className="h-6 w-6 text-white" />
+            </div>
+            <div>
+              <h3 className="font-medium text-gray-900">View All Assignments</h3>
+              <p className="text-sm text-gray-500">Monitor all assignments</p>
+            </div>
+          </div>
+        </Link>
+
+        <Link href="/admin/submissions" className="bg-white rounded-lg shadow p-6 hover:shadow-md transition-shadow">
+          <div className="flex items-center space-x-3">
+            <div className="bg-green-500 p-3 rounded-lg">
+              <HiDocumentText className="h-6 w-6 text-white" />
+            </div>
+            <div>
+              <h3 className="font-medium text-gray-900">View All Submissions</h3>
+              <p className="text-sm text-gray-500">Monitor all submissions</p>
+            </div>
+          </div>
+        </Link>
       </div>
 
       {/* Recent Activities */}
