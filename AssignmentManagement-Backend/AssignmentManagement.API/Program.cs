@@ -31,7 +31,10 @@ builder.Services.AddCors(options =>
     options.AddPolicy("AllowFrontend", policy =>
     {
         policy
-            .WithOrigins("http://localhost:3000")
+            .WithOrigins(
+                "http://localhost:3000",
+                "https://assignment.researchustad.org"
+            )
             .AllowAnyMethod()
             .AllowAnyHeader();
     });
@@ -91,12 +94,17 @@ using (var scope = app.Services.CreateScope())
     await DbInitializer.Initialize(context);
 }
 
-// Configure the HTTP request pipeline.
+
 // Swagger
-if (app.Environment.IsDevelopment())
+if (builder.Configuration.GetValue<bool>("Swagger:Enabled"))
 {
     app.UseSwagger();
-    app.UseSwaggerUI();
+
+    app.UseSwaggerUI(options =>
+    {
+        options.SwaggerEndpoint("/swagger/v1/swagger.json", "Assignment Management API v1");
+        options.RoutePrefix = "swagger";
+    });
 }
 
 // middleware
