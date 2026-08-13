@@ -130,9 +130,14 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
 
           {userNavigation.map((item) => {
             const itemHref =
-              item.label === 'Dashboard'
-                ? getDashboardPath()
+            item.label === 'Dashboard'
+              ? getDashboardPath()
+              : item.label === 'Assignments'
+                ? user?.role === 'Student'
+                  ? '/student/assignments'
+                  : '/teacher/assignments'
                 : item.href;
+
 
             const isActive =
               pathname === itemHref ||
@@ -153,7 +158,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
                   {item.label}
                 </Link>
 
-                {item.children && pathname.startsWith(item.href) && (
+                {item.children && pathname.startsWith(itemHref) && (
                   <div className="ml-8 mt-1 space-y-1">
                     {item.children
                       .filter(child => child.roles.includes(user?.role || ''))

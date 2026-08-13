@@ -54,6 +54,12 @@ export const navigation: NavItem[] = [
     roles: ['Admin'],
   },
   {
+    label: 'All Assignment',
+    href: '/admin/assignments',
+    icon: HiDocumentText,
+    roles: ['Admin']
+  },
+  {
     label: 'Assignments',
     href: '/teacher/assignments',
     icon: HiClipboardList,
@@ -86,6 +92,6 @@ export const navigation: NavItem[] = [
     label: 'Profile',
     href: '/profile',
     icon: HiUser,
-    roles: ['Teacher', 'Student'],
+    roles: ['admin','Teacher', 'Student'],
   },
 ];

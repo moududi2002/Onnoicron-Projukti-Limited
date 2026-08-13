@@ -1,5 +1,6 @@
+// src/components/student/FeedbackDisplay.tsx
 import { Submission } from '@/types';
-import { HiStar, HiLightBulb } from 'react-icons/hi';
+import { HiStar, HiLightBulb, HiCheckCircle, HiExclamationCircle } from 'react-icons/hi';
 
 interface FeedbackDisplayProps {
   submission: Submission;
@@ -20,12 +21,13 @@ export default function FeedbackDisplay({ submission }: FeedbackDisplayProps) {
   };
 
   return (
-    <div className="bg-white rounded-lg shadow p-6 space-y-4">
+    <div className="bg-white rounded-lg shadow p-6 space-y-6">
       <h2 className="text-lg font-semibold flex items-center">
         <HiStar className="h-5 w-5 text-warning-500 mr-2" />
         Grade & Feedback
       </h2>
 
+      {/* Marks */}
       <div className="bg-success-50 border border-success-200 rounded-lg p-4">
         <div className="flex items-center justify-between mb-2">
           <span className="text-sm text-gray-600">Marks Obtained</span>
@@ -42,6 +44,7 @@ export default function FeedbackDisplay({ submission }: FeedbackDisplayProps) {
         <p className="text-xs text-gray-500 mt-1">{percentage.toFixed(1)}%</p>
       </div>
 
+      {/* Overall Feedback */}
       {submission.feedback && (
         <div>
           <h3 className="text-sm font-medium text-gray-700 mb-2 flex items-center">
@@ -54,6 +57,27 @@ export default function FeedbackDisplay({ submission }: FeedbackDisplayProps) {
         </div>
       )}
 
+      {/* Grading Details */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        {submission.strengths && (
+          <div className="bg-success-50 border border-success-200 rounded-lg p-4">
+            <h4 className="text-sm font-medium text-success-700 flex items-center mb-2">
+              <HiCheckCircle className="h-4 w-4 mr-1" /> Strengths
+            </h4>
+            <p className="text-sm text-gray-700">{submission.strengths}</p>
+          </div>
+        )}
+        {submission.areasForImprovement && (
+          <div className="bg-warning-50 border border-warning-200 rounded-lg p-4">
+            <h4 className="text-sm font-medium text-warning-700 flex items-center mb-2">
+              <HiExclamationCircle className="h-4 w-4 mr-1" /> Areas for Improvement
+            </h4>
+            <p className="text-sm text-gray-700">{submission.areasForImprovement}</p>
+          </div>
+        )}
+      </div>
+
+      {/* Graded At */}
       {submission.gradedAt && (
         <p className="text-xs text-gray-400">
           Graded on {new Date(submission.gradedAt).toLocaleString()}

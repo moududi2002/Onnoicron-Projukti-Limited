@@ -5,6 +5,8 @@ import { useState, useEffect } from 'react';
 import { apiClient } from '@/services/api-client';
 import { HiUsers, HiBookOpen } from 'react-icons/hi';
 import { toast } from 'react-hot-toast';
+import { classService } from '@/services/class-service';
+
 
 interface TeacherClass {
   id: string;
@@ -20,7 +22,7 @@ export default function TeacherClassesPage() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    apiClient.get<TeacherClass[]>('/teacher/classes')
+    classService.getTeacherClasses()
       .then(setClasses)
       .catch(() => toast.error('Failed to load classes'))
       .finally(() => setLoading(false));
