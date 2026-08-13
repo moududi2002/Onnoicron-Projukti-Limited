@@ -120,9 +120,9 @@ D:\Skills\AssignmentManagement\AssignmentManagement.Tests\obj\Debug\net10.0\Assi
 D:\Skills\AssignmentManagement\AssignmentManagement.Tests\obj\Debug\net10.0\ref\AssignmentManagement.Tests.dll
 D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\.msCoverageSourceRootsMapping_AssignmentManagement.Tests
 D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\CoverletSourceRootsMapping_AssignmentManagement.Tests
-D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\testhost.exe
 D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\testhost.dll
 D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\xunit.abstractions.dll
+D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\testhost.exe
 D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\xunit.runner.visualstudio.testadapter.dll
 D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\AssignmentManagement.Tests.deps.json
 D:\Skills\Project Onnurokom Projukti\AssignmentManagement-Backend\AssignmentManagement.Tests\bin\Debug\net10.0\AssignmentManagement.Tests.runtimeconfig.json

@@ -1,4 +1,3 @@
-// Application/Interfaces/ISubmissionService.cs
 using AssignmentManagement.Application.DTOs;
 
 namespace AssignmentManagement.Application.Interfaces
@@ -9,11 +8,19 @@ namespace AssignmentManagement.Application.Interfaces
         Task<SubmissionDto> UpdateSubmissionAsync(Guid id, UpdateSubmissionDto dto, Guid studentId);
         Task<SubmissionDto> GradeSubmissionAsync(Guid id, GradeSubmissionDto dto, Guid teacherId);
         Task<SubmissionDto> GetSubmissionByIdAsync(Guid id);
-        Task<PaginatedResponseDto<SubmissionDto>> GetSubmissionsForAssignmentAsync(
-            Guid assignmentId, int page = 1, int limit = 10);
+        Task<PaginatedResponseDto<SubmissionDto>> GetSubmissionsForAssignmentAsync(Guid assignmentId, int page = 1, int limit = 10);
         Task<IEnumerable<SubmissionDto>> GetStudentSubmissionsAsync(Guid studentId);
         Task<bool> HasStudentSubmittedAsync(Guid assignmentId, Guid studentId);
         Task<DashboardStatsDto> GetStudentDashboardStatsAsync(Guid studentId);
         Task<bool> CanSubmitAssignmentAsync(Guid assignmentId, Guid studentId);
+        
+        // New method for admin
+        Task<PaginatedResponseDto<SubmissionDto>> GetAllSubmissionsAsync(
+            string? status = null,
+            string? searchTerm = null,
+            Guid? assignmentId = null,
+            Guid? studentId = null,
+            int page = 1,
+            int limit = 10);
     }
 }

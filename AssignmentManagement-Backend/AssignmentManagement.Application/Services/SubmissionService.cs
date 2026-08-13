@@ -279,5 +279,57 @@ namespace AssignmentManagement.Application.Services
                 }).ToList() ?? new List<AttachmentDto>()
             };
         }
+
+        public async Task<PaginatedResponseDto<SubmissionDto>> GetAllSubmissionsAsync(
+            string? status = null,
+            string? searchTerm = null,
+            Guid? assignmentId = null,
+            Guid? studentId = null,
+            int page = 1,
+            int limit = 10)
+        {
+            var query = _context.Submissions
+                .Include(s => s.Student)
+                .Include(s => s.Assignment)
+                .Include(s => s.Attachments)
+                .AsQueryable();
+
+            // Filter by status
+            if (!string.IsNullOrEmpty(status) && Enum.TryParse<SubmissionStatus>(status, out var statusEnum))
+                query = query.Where(s => s.Status == statusEnum);
+
+            // Filter by assignment
+            if (assignmentId.HasValue)
+                query = query.Where(s => s.AssignmentId == assignmentId.Value);
+
+            // Filter by student
+            if (studentId.HasValue)
+                query = query.Where(s => s.StudentId == studentId.Value);
+
+            // Search by student name or assignment title
+            if (!string.IsNullOrEmpty(searchTerm))
+            {
+                searchTerm = searchTerm.ToLower();
+                query = query.Where(s =>
+                    (s.Student.FirstName + " " + s.Student.LastName).ToLower().Contains(searchTerm) ||
+                    s.Assignment.Title.ToLower().Contains(searchTerm));
+            }
+
+            var total = await query.CountAsync();
+
+            var submissions = await query
+                .OrderByDescending(s => s.SubmittedAt)
+                .Skip((page - 1) * limit)
+                .Take(limit)
+                .ToListAsync();
+
+            return new PaginatedResponseDto<SubmissionDto>
+            {
+                Data = submissions.Select(MapToDto).ToList(),
+                Total = total,
+                Page = page,
+                Limit = limit
+            };
+        }
     }
 }

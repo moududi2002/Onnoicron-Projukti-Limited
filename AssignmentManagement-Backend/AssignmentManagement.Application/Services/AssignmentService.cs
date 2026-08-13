@@ -135,45 +135,54 @@ namespace AssignmentManagement.Application.Services
             return MapToDto(assignment);
         }
 
-        public async Task<PaginatedResponseDto<AssignmentDto>> GetAssignmentsAsync(
-            Guid? classId = null, 
-            Guid? subjectId = null, 
-            string? status = null,
-            int page = 1, 
-            int limit = 10)
-        {
-            var query = _context.Assignments
-                .Include(a => a.Class)
-                .Include(a => a.Subject)
-                .Include(a => a.CreatedBy)
-                .Include(a => a.Submissions)
-                .AsQueryable();
+            public async Task<PaginatedResponseDto<AssignmentDto>> GetAssignmentsAsync(
+                Guid? classId = null,
+                Guid? subjectId = null,
+                string? status = null,
+                string? searchTerm = null,
+                int page = 1,
+                int limit = 10)
+                {
+                    var query = _context.Assignments
+                        .Include(a => a.Class)
+                        .Include(a => a.Subject)
+                        .Include(a => a.CreatedBy)
+                        .Include(a => a.Submissions)
+                        .Include(a => a.Attachments)
+                        .AsQueryable();
 
-            if (classId.HasValue)
-                query = query.Where(a => a.ClassId == classId.Value);
+                    if (classId.HasValue)
+                        query = query.Where(a => a.ClassId == classId.Value);
 
-            if (subjectId.HasValue)
-                query = query.Where(a => a.SubjectId == subjectId.Value);
+                    if (subjectId.HasValue)
+                        query = query.Where(a => a.SubjectId == subjectId.Value);
 
-            if (!string.IsNullOrEmpty(status) && Enum.TryParse<AssignmentStatus>(status, out var statusEnum))
-                query = query.Where(a => a.Status == statusEnum);
+                    if (!string.IsNullOrEmpty(status) && Enum.TryParse<AssignmentStatus>(status, out var statusEnum))
+                        query = query.Where(a => a.Status == statusEnum);
 
-            var total = await query.CountAsync();
+                    // Search by title
+                    if (!string.IsNullOrEmpty(searchTerm))
+                    {
+                        searchTerm = searchTerm.ToLower();
+                        query = query.Where(a => a.Title.ToLower().Contains(searchTerm));
+                    }
 
-            var assignments = await query
-                .OrderByDescending(a => a.CreatedAt)
-                .Skip((page - 1) * limit)
-                .Take(limit)
-                .ToListAsync();
+                    var total = await query.CountAsync();
 
-            return new PaginatedResponseDto<AssignmentDto>
-            {
-                Data = assignments.Select(MapToDto).ToList(),
-                Total = total,
-                Page = page,
-                Limit = limit
-            };
-        }
+                    var assignments = await query
+                        .OrderByDescending(a => a.CreatedAt)
+                        .Skip((page - 1) * limit)
+                        .Take(limit)
+                        .ToListAsync();
+
+                    return new PaginatedResponseDto<AssignmentDto>
+                    {
+                        Data = assignments.Select(MapToDto).ToList(),
+                        Total = total,
+                        Page = page,
+                        Limit = limit
+                    };
+                }
 
         public async Task<IEnumerable<AssignmentDto>> GetAssignmentsForStudentAsync(Guid studentId)
         {
