@@ -15,7 +15,9 @@ export interface FileUploadResult {
   fileSize: number;
 }
 
-export interface FileUploadProgress {
-  progress: number;
+export interface FileUploadResult {
   fileName: string;
+  fileUrl: string;
+  contentType: string;
+  fileSize: number;
 }

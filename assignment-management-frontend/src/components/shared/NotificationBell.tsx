@@ -1,4 +1,4 @@
-'use client';
+ 'use client';
 
 import { useState } from 'react';
 import { HiBell, HiX } from 'react-icons/hi';

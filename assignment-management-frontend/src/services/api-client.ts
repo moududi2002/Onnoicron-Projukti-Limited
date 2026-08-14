@@ -37,15 +37,36 @@ class ApiClient {
     if (!res.ok) throw new Error((await res.json().catch(() => ({ message: 'Error' }))).message);
   }
 
+
   async uploadFile<T>(endpoint: string, file: File, onProgress?: (p: number) => void): Promise<T> {
     const formData = new FormData();
     formData.append('file', file);
     const token = this.getToken();
+    
     return new Promise((resolve, reject) => {
       const xhr = new XMLHttpRequest();
-      xhr.upload.onprogress = (e) => { if (e.lengthComputable && onProgress) onProgress(Math.round((e.loaded / e.total) * 100)); };
-      xhr.onload = () => { if (xhr.status >= 200 && xhr.status < 300) resolve(JSON.parse(xhr.responseText)); else reject(new Error('Upload failed')); };
-      xhr.onerror = () => reject(new Error('Upload failed'));
+      xhr.upload.onprogress = (e) => {
+        if (e.lengthComputable && onProgress) {
+          onProgress(Math.round((e.loaded / e.total) * 100));
+        }
+      };
+      xhr.onload = () => {
+        if (xhr.status >= 200 && xhr.status < 300) {
+          try {
+            resolve(JSON.parse(xhr.responseText));
+          } catch {
+            reject(new Error('Invalid response'));
+          }
+        } else {
+          try {
+            const error = JSON.parse(xhr.responseText);
+            reject(new Error(error.message || 'Upload failed'));
+          } catch {
+            reject(new Error('Upload failed'));
+          }
+        }
+      };
+      xhr.onerror = () => reject(new Error('Network error'));
       xhr.open('POST', `${API_BASE_URL}${endpoint}`);
       if (token) xhr.setRequestHeader('Authorization', `Bearer ${token}`);
       xhr.send(formData);

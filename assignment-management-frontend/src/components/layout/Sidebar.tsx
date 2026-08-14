@@ -5,7 +5,7 @@ import { useAuth } from '@/contexts/AuthContext';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { navigation } from '@/config/navigation';
-import { HiX, HiLogout } from 'react-icons/hi';
+import { HiX, HiLogout,HiUser } from 'react-icons/hi';
 import { clsx } from 'clsx';
 
 interface SidebarProps {
@@ -22,6 +22,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
   );
 
   return (
+    
     <div
       className={clsx(
         'fixed inset-y-0 left-0 z-50 w-64 bg-white shadow-lg transform transition-transform duration-300 ease-in-out lg:translate-x-0 lg:static lg:inset-0',
@@ -44,16 +45,21 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
       </div>
 
       {/* User Info */}
+
       <div className="px-6 py-4 border-b border-gray-200">
-        <Link href={`/${user?.role.toLowerCase()}/profile`} className="flex items-center space-x-3 hover:bg-gray-50 rounded-lg p-2 transition-colors">
+        <Link 
+          href={`/${user?.role?.toLowerCase()}/profile`}
+          className="flex items-center space-x-3 hover:bg-gray-50 rounded-lg p-2 transition-colors group"
+        >
           {user?.profilePicture ? (
             <img
-              src={user.profilePicture}
+              src={`${process.env.NEXT_PUBLIC_API_URL}${user.profilePicture}`}
               alt={`${user.firstName} ${user.lastName}`}
-              className="h-10 w-10 rounded-full object-cover border-2 border-primary-200"
+              className="h-10 w-10 rounded-full object-cover border-2 border-primary-200 group-hover:border-primary-400 transition-colors"
+              onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
             />
           ) : (
-            <div className="h-10 w-10 rounded-full bg-primary-100 border-2 border-primary-200 flex items-center justify-center">
+            <div className="h-10 w-10 rounded-full bg-primary-100 border-2 border-primary-200 group-hover:border-primary-400 flex items-center justify-center transition-colors">
               <span className="text-primary-600 font-medium text-sm">
                 {user?.firstName?.[0]}{user?.lastName?.[0]}
               </span>
@@ -65,9 +71,12 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
             </p>
             <p className="text-xs text-gray-500">{user?.role}</p>
           </div>
+          <svg className="h-4 w-4 text-gray-400 group-hover:text-primary-600 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+          </svg>
         </Link>
       </div>
-
+ 
       {/* Navigation */}
       <nav className="flex-1 px-4 py-4 space-y-1 overflow-y-auto">
         {userNavigation.map((item) => {
@@ -114,6 +123,13 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
             </div>
           );
         })}
+        <Link
+        href={`/${user?.role.toLowerCase()}/profile`}
+        className="flex items-center px-3 py-2 text-sm font-medium rounded-lg transition-colors text-gray-700 hover:bg-gray-100"
+      >
+        <HiUser className="mr-3 h-5 w-5 flex-shrink-0" />
+        My Profile
+        </Link>
       </nav>
 
       {/* Logout */}
@@ -127,5 +143,6 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
         </button>
       </div>
     </div>
+    
   );
 }

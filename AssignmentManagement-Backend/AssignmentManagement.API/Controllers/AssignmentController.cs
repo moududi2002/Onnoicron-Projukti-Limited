@@ -51,9 +51,15 @@ namespace AssignmentManagement.API.Controllers
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Error getting assignments");
-                return StatusCode(500, new { message = "An error occurred while fetching assignments" });
+                _logger.LogError(ex, "Error creating assignment");
+
+                return StatusCode(500, new
+                {
+                    message = ex.Message,
+                    inner = ex.InnerException?.Message
+                });
             }
+
         }
 
         // GET: api/assignment/{id}

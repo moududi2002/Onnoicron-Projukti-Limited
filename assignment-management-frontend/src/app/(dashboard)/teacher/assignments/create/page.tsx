@@ -10,6 +10,8 @@ import { toast } from 'react-hot-toast';
 import { apiClient } from '@/services/api-client';
 import Link from 'next/link';
 
+
+
 const createAssignmentSchema = z.object({
   title: z.string().min(1, 'Title is required').max(500),
   description: z.string().optional(),
@@ -106,7 +108,7 @@ export default function CreateAssignmentPage() {
     }
   };
 
-  const onSubmit = async (data: CreateAssignmentFormData) => {
+  {/*const onSubmit = async (data: CreateAssignmentFormData) => {
     setIsSubmitting(true);
     try {
       await apiClient.post('/assignment', data);
@@ -118,6 +120,30 @@ export default function CreateAssignmentPage() {
       setIsSubmitting(false);
     }
   };
+  */}
+
+    const onSubmit = async (data: CreateAssignmentFormData) => {
+      setIsSubmitting(true);
+
+      try {
+        const payload = {
+          ...data,
+          status: data.status === 'Draft' ? 0 : 1,
+        };
+
+        await apiClient.post('/assignment', payload);
+
+        toast.success('Assignment created successfully!');
+        router.push('/teacher/assignments');
+      } catch (error: any) {
+        console.error(error);
+        toast.error(error.message || 'Failed to create assignment');
+      } finally {
+        setIsSubmitting(false);
+      }
+    };
+
+
 
   return (
     <div className="max-w-3xl mx-auto space-y-6">
@@ -209,10 +235,13 @@ export default function CreateAssignmentPage() {
           <div>
             <label className="block text-sm font-medium text-gray-700">Deadline *</label>
             <input
-              {...register('deadline')}
-              type="datetime-local"
-              className="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500"
-            />
+                {...register('deadline')}
+                type="datetime-local"
+                min={new Date(Date.now() + 24 * 60 * 60 * 1000)
+                  .toISOString()
+                  .slice(0, 16)}
+                className="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500"
+              />
             {errors.deadline && <p className="mt-1 text-sm text-danger-600">{errors.deadline.message}</p>}
           </div>
 

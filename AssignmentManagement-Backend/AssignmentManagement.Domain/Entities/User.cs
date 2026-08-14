@@ -29,6 +29,7 @@ namespace AssignmentManagement.Domain.Entities
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
         public DateTime? UpdatedAt { get; set; }
 
+        //  profile fields
         [MaxLength(500)]
         public string? ProfilePicture { get; set; }
 

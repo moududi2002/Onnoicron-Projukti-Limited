@@ -24,43 +24,28 @@ namespace AssignmentManagement.Application.Services
             if (file == null || file.Length == 0)
                 throw new ArgumentException("File is empty");
 
-            // Validate file size (max 10MB)
-            if (file.Length > 10 * 1024 * 1024)
-                throw new InvalidOperationException("File size exceeds 10MB limit");
+            // Validate file size (max 10MB general, 5MB for profile)
+            long maxSize = folderName == "profiles" ? 5 * 1024 * 1024 : 10 * 1024 * 1024;
+            if (file.Length > maxSize)
+                throw new InvalidOperationException($"File size exceeds {maxSize / (1024 * 1024)}MB limit");
 
-            // Validate file type
-            var allowedExtensions = new[] { ".pdf", ".doc", ".docx", ".txt", ".jpg", ".jpeg", ".png", ".zip", ".xlsx", ".pptx" };
-            var allowedMimeTypes = new[] 
-            { 
-                "application/pdf",
-                "application/msword",
-                "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
-                "text/plain",
-                "image/jpeg",
-                "image/png",
-                "application/zip",
-                "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-                "application/vnd.openxmlformats-officedocument.presentationml.presentation"
-            };
+            // Allowed extensions based on folder
+            var allowedExtensions = folderName == "profiles"
+                ? new[] { ".jpg", ".jpeg", ".png", ".gif", ".webp" }
+                : new[] { ".pdf", ".doc", ".docx", ".txt", ".jpg", ".jpeg", ".png", ".zip", ".xlsx", ".pptx" };
 
             var fileExtension = Path.GetExtension(file.FileName).ToLower();
             
             if (!allowedExtensions.Contains(fileExtension))
-                throw new InvalidOperationException($"File type {fileExtension} is not allowed");
+                throw new InvalidOperationException($"File type {fileExtension} is not allowed for {folderName}");
 
-            if (!allowedMimeTypes.Contains(file.ContentType))
-                throw new InvalidOperationException($"File type {file.ContentType} is not allowed");
-
-            // Create folder if not exists
             var uploadFolder = Path.Combine(_uploadBasePath, folderName, DateTime.UtcNow.ToString("yyyy-MM"));
             if (!Directory.Exists(uploadFolder))
                 Directory.CreateDirectory(uploadFolder);
 
-            // Generate unique filename
             var uniqueFileName = $"{Guid.NewGuid()}{fileExtension}";
             var filePath = Path.Combine(uploadFolder, uniqueFileName);
 
-            // Save file
             using (var stream = new FileStream(filePath, FileMode.Create))
             {
                 await file.CopyToAsync(stream);

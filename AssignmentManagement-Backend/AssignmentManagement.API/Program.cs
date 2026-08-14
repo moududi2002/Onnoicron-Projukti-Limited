@@ -6,6 +6,9 @@ using AssignmentManagement.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using AssignmentManagement.Application.Validators;
 using FluentValidation;
+using System.Text.Json.Serialization;
+
+
 
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
@@ -64,6 +67,16 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     });
 
 builder.Services.AddAuthorization();
+
+builder.Services
+    .AddControllers()
+    .AddJsonOptions(options =>
+    {
+        options.JsonSerializerOptions.Converters.Add(
+            new JsonStringEnumConverter()
+        );
+    });
+
 
 
 // Application Services
