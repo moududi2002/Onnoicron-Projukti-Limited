@@ -1,3 +1,4 @@
+// src/components/layout/Sidebar.tsx
 'use client';
 
 import { useAuth } from '@/contexts/AuthContext';
@@ -44,19 +45,27 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
 
       {/* User Info */}
       <div className="px-6 py-4 border-b border-gray-200">
-        <div className="flex items-center space-x-3">
-          <div className="h-10 w-10 rounded-full bg-primary-100 flex items-center justify-center flex-shrink-0">
-            <span className="text-primary-600 font-medium text-sm">
-              {user?.firstName?.[0]}{user?.lastName?.[0]}
-            </span>
-          </div>
+        <Link href={`/${user?.role.toLowerCase()}/profile`} className="flex items-center space-x-3 hover:bg-gray-50 rounded-lg p-2 transition-colors">
+          {user?.profilePicture ? (
+            <img
+              src={user.profilePicture}
+              alt={`${user.firstName} ${user.lastName}`}
+              className="h-10 w-10 rounded-full object-cover border-2 border-primary-200"
+            />
+          ) : (
+            <div className="h-10 w-10 rounded-full bg-primary-100 border-2 border-primary-200 flex items-center justify-center">
+              <span className="text-primary-600 font-medium text-sm">
+                {user?.firstName?.[0]}{user?.lastName?.[0]}
+              </span>
+            </div>
+          )}
           <div className="flex-1 min-w-0">
             <p className="text-sm font-medium text-gray-900 truncate">
               {user?.firstName} {user?.lastName}
             </p>
             <p className="text-xs text-gray-500">{user?.role}</p>
           </div>
-        </div>
+        </Link>
       </div>
 
       {/* Navigation */}

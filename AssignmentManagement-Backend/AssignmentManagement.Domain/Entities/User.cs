@@ -29,6 +29,15 @@ namespace AssignmentManagement.Domain.Entities
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
         public DateTime? UpdatedAt { get; set; }
 
+        [MaxLength(500)]
+        public string? ProfilePicture { get; set; }
+
+        [MaxLength(20)]
+        public string? Phone { get; set; }
+
+        [MaxLength(500)]
+        public string? Address { get; set; }
+
         // Navigation properties
         public ICollection<StudentClass> StudentClasses { get; set; } = new List<StudentClass>();
         public ICollection<TeacherAssignment> TeacherAssignments { get; set; } = new List<TeacherAssignment>();

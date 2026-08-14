@@ -4,6 +4,10 @@ using AssignmentManagement.Application.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
+using AssignmentManagement.Infrastructure.Data;
+using Microsoft.EntityFrameworkCore;
+
+
 
 namespace AssignmentManagement.API.Controllers
 {
@@ -14,14 +18,17 @@ namespace AssignmentManagement.API.Controllers
     {
         private readonly IAssignmentService _assignmentService;
         private readonly ILogger<AssignmentController> _logger;
+        private readonly ApplicationDbContext _context;
 
         public AssignmentController(
-            IAssignmentService assignmentService,
-            ILogger<AssignmentController> logger)
-        {
-            _assignmentService = assignmentService;
-            _logger = logger;
-        }
+        IAssignmentService assignmentService,
+        ILogger<AssignmentController> logger,
+        ApplicationDbContext context)
+    {
+        _assignmentService = assignmentService;
+        _logger = logger;
+        _context = context;
+    }
 
         // GET: api/assignment (Admin - all assignments with filters)
         [HttpGet]
@@ -240,6 +247,75 @@ namespace AssignmentManagement.API.Controllers
             }
 
             return parsedUserId;
+        }
+
+
+        // GET: api/assignment/teacher/classes
+        [HttpGet("teacher/classes")]
+        [Authorize(Roles = "Teacher")]
+        public async Task<ActionResult<IEnumerable<ClassDto>>> GetTeacherClasses()
+        {
+            try
+            {
+                var teacherId = GetCurrentUserId();
+                var classes = await _context.TeacherAssignments
+                    .Where(ta => ta.TeacherId == teacherId)
+                    .Include(ta => ta.Subject)
+                    .ThenInclude(s => s.Class)
+                    .Select(ta => ta.Subject.Class)
+                    .Distinct()
+                    .Select(c => new ClassDto
+                    {
+                        Id = c.Id,
+                        Name = c.Name,
+                        Description = c.Description,
+                        AcademicYear = c.AcademicYear,
+                        IsActive = c.IsActive,
+                        StudentCount = c.StudentClasses.Count,
+                        SubjectCount = c.Subjects.Count,
+                        CreatedAt = c.CreatedAt
+                    })
+                    .ToListAsync();
+
+                return Ok(classes);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error getting teacher classes");
+                return StatusCode(500, new { message = "An error occurred" });
+            }
+        }
+
+        // GET: api/assignment/teacher/classes/{classId}/subjects
+        [HttpGet("teacher/classes/{classId}/subjects")]
+        [Authorize(Roles = "Teacher")]
+        public async Task<ActionResult<IEnumerable<SubjectDto>>> GetTeacherSubjectsByClass(Guid classId)
+        {
+            try
+            {
+                var teacherId = GetCurrentUserId();
+                var subjects = await _context.TeacherAssignments
+                    .Where(ta => ta.TeacherId == teacherId && ta.Subject.ClassId == classId)
+                    .Include(ta => ta.Subject)
+                        .ThenInclude(s => s.Class)
+                    .Select(ta => new SubjectDto
+                    {
+                        Id = ta.Subject.Id,
+                        Name = ta.Subject.Name,
+                        Code = ta.Subject.Code,
+                        ClassId = ta.Subject.ClassId,
+                        ClassName = ta.Subject.Class.Name,
+                        IsActive = ta.Subject.IsActive
+                    })
+                    .ToListAsync();
+
+                return Ok(subjects);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, $"Error getting teacher subjects for class {classId}");
+                return StatusCode(500, new { message = "An error occurred" });
+            }
         }
 
     }

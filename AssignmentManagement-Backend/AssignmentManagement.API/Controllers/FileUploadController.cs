@@ -243,6 +243,48 @@ namespace AssignmentManagement.API.Controllers
             return id;
         }
 
+        [HttpPost("profile/{userId}")]
+        [Authorize]
+        public async Task<ActionResult<FileUploadResult>> UploadProfilePicture(Guid userId, IFormFile file)
+        {
+            try
+            {
+                // Verify user is uploading their own picture or is admin
+                var currentUserId = GetCurrentUserId();
+                var currentUserRole = User.FindFirstValue(ClaimTypes.Role);
+
+                if (currentUserId != userId && currentUserRole != "Admin")
+                    return Forbid();
+
+                // Validate file type
+                var allowedTypes = new[] { "image/jpeg", "image/png", "image/gif", "image/webp" };
+                if (!allowedTypes.Contains(file.ContentType))
+                    return BadRequest(new { message = "Only image files are allowed" });
+
+                // Validate file size (max 5MB)
+                if (file.Length > 5 * 1024 * 1024)
+                    return BadRequest(new { message = "Image must be less than 5MB" });
+
+                var result = await _fileUploadService.UploadFileAsync(file, "profiles");
+
+                // Update user's profile picture
+                var user = await _context.Users.FindAsync(userId);
+                if (user != null)
+                {
+                    user.ProfilePicture = result.FileUrl;
+                    user.UpdatedAt = DateTime.UtcNow;
+                    await _context.SaveChangesAsync();
+                }
+
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error uploading profile picture");
+                return StatusCode(500, new { message = "An error occurred" });
+            }
+        }
+
        
     }
 }

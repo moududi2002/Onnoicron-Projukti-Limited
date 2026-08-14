@@ -1,3 +1,4 @@
+// src\types\user.types.ts
 export interface User {
   id: string;
   username: string;
@@ -9,6 +10,9 @@ export interface User {
   createdAt: string;
   updatedAt?: string;
   fullName?: string;
+  profilePicture?: string; 
+  phone?: string;           
+  address?: string;         
 }
 
 export interface CreateUserDto {

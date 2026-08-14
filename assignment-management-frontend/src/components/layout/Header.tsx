@@ -1,3 +1,4 @@
+// src/components/layout/Header.tsx
 'use client';
 
 import { useState } from 'react';
@@ -5,14 +6,10 @@ import { useAuth } from '@/contexts/AuthContext';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import {
-  HiMenu,
-  HiBell,
-  HiSearch,
-  HiLogout,
-  HiUser,
-  HiCog,
+  HiMenu, HiBell, HiSearch, HiLogout, HiUser, HiCog, HiChevronDown,
 } from 'react-icons/hi';
-import Dropdown from '@/components/ui/Dropdown';
+import { useClickOutside } from '@/hooks/useClickOutside';
+import { useRef } from 'react';
 
 interface HeaderProps {
   onMenuClick?: () => void;
@@ -22,72 +19,58 @@ export default function Header({ onMenuClick }: HeaderProps) {
   const { user, logout } = useAuth();
   const router = useRouter();
   const [searchQuery, setSearchQuery] = useState('');
+  const [profileOpen, setProfileOpen] = useState(false);
+  const profileRef = useRef<HTMLDivElement>(null);
+
+  useClickOutside(profileRef, () => setProfileOpen(false));
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
-    // Implement search functionality
+    // Implement search
   };
 
-  const userMenuItems = [
-    {
-      label: 'Profile',
-      icon: <HiUser className="h-4 w-4" />,
-      onClick: () => router.push(`/${user?.role.toLowerCase()}/profile`),
-    },
-    {
-      label: 'Settings',
-      icon: <HiCog className="h-4 w-4" />,
-      onClick: () => router.push('/settings'),
-      divider: true,
-    },
-    {
-      label: 'Sign Out',
-      icon: <HiLogout className="h-4 w-4" />,
-      onClick: logout,
-      danger: true,
-    },
-  ];
+  const handleLogout = () => {
+    setProfileOpen(false);
+    logout();
+    router.push('/login');
+  };
+
+  const getProfileRoute = () => {
+    switch (user?.role) {
+      case 'Admin': return '/admin/profile';
+      case 'Teacher': return '/teacher/profile';
+      case 'Student': return '/student/profile';
+      default: return '/profile';
+    }
+  };
 
   return (
     <header className="bg-white shadow-sm border-b border-gray-200">
       <div className="flex items-center justify-between h-16 px-4 sm:px-6">
-        {/* Left: Menu button + Logo */}
-        <div className="flex items-center space-x-4">
+        {/* Left: Menu + Search */}
+        <div className="flex items-center space-x-4 flex-1">
           {onMenuClick && (
-            <button
-              onClick={onMenuClick}
-              className="lg:hidden text-gray-500 hover:text-gray-700"
-            >
+            <button onClick={onMenuClick} className="lg:hidden text-gray-500 hover:text-gray-700">
               <HiMenu className="h-6 w-6" />
             </button>
           )}
-          <Link href="/" className="lg:hidden flex items-center space-x-2">
-            <svg className="h-8 w-8 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
-                d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
-              />
-            </svg>
-            <span className="font-bold text-gray-900">AMS</span>
-          </Link>
+          <div className="max-w-md w-full hidden sm:block">
+            <form onSubmit={handleSearch}>
+              <div className="relative">
+                <HiSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
+                <input
+                  type="text"
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  placeholder="Search..."
+                  className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 text-sm"
+                />
+              </div>
+            </form>
+          </div>
         </div>
 
-        {/* Center: Search */}
-        <div className="flex-1 max-w-md mx-4 hidden sm:block">
-          <form onSubmit={handleSearch}>
-            <div className="relative">
-              <HiSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
-              <input
-                type="text"
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                placeholder="Search..."
-                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 text-sm"
-              />
-            </div>
-          </form>
-        </div>
-
-        {/* Right: Actions */}
+        {/* Right: Notifications + Profile */}
         <div className="flex items-center space-x-4">
           {/* Notifications */}
           <button className="relative text-gray-500 hover:text-gray-700">
@@ -97,23 +80,94 @@ export default function Header({ onMenuClick }: HeaderProps) {
             </span>
           </button>
 
-          {/* User Menu */}
-          <Dropdown
-            trigger={
-              <button className="flex items-center space-x-2 focus:outline-none">
-                <div className="h-8 w-8 rounded-full bg-primary-100 flex items-center justify-center">
-                  <span className="text-primary-600 font-medium text-sm">
+          {/* Profile Dropdown */}
+          <div className="relative" ref={profileRef}>
+            <button
+              onClick={() => setProfileOpen(!profileOpen)}
+              className="flex items-center space-x-2 focus:outline-none hover:bg-gray-50 rounded-lg px-2 py-1 transition-colors"
+            >
+              {/* Profile Picture / Avatar */}
+              {user?.profilePicture ? (
+                <img
+                  src={user.profilePicture}
+                  alt={`${user.firstName} ${user.lastName}`}
+                  className="h-9 w-9 rounded-full object-cover border-2 border-primary-200"
+                />
+              ) : (
+                <div className="h-9 w-9 rounded-full bg-primary-100 border-2 border-primary-200 flex items-center justify-center">
+                  <span className="text-primary-600 font-semibold text-sm">
                     {user?.firstName?.[0]}{user?.lastName?.[0]}
                   </span>
                 </div>
-                <span className="hidden md:block text-sm font-medium text-gray-700">
-                  {user?.firstName}
-                </span>
-              </button>
-            }
-            items={userMenuItems}
-            align="right"
-          />
+              )}
+              <div className="hidden md:block text-left">
+                <p className="text-sm font-medium text-gray-900 leading-tight">
+                  {user?.firstName} {user?.lastName}
+                </p>
+                <p className="text-xs text-gray-500 leading-tight">{user?.role}</p>
+              </div>
+              <HiChevronDown className={`h-4 w-4 text-gray-400 transition-transform ${profileOpen ? 'rotate-180' : ''}`} />
+            </button>
+
+            {/* Dropdown Menu */}
+            {profileOpen && (
+              <div className="absolute right-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 z-50">
+                {/* User Info Header */}
+                <div className="px-4 py-3 border-b border-gray-200">
+                  <div className="flex items-center space-x-3">
+                    {user?.profilePicture ? (
+                      <img
+                        src={user.profilePicture}
+                        alt="Profile"
+                        className="h-12 w-12 rounded-full object-cover"
+                      />
+                    ) : (
+                      <div className="h-12 w-12 rounded-full bg-primary-100 flex items-center justify-center">
+                        <span className="text-primary-600 font-bold text-lg">
+                          {user?.firstName?.[0]}{user?.lastName?.[0]}
+                        </span>
+                      </div>
+                    )}
+                    <div>
+                      <p className="font-medium text-gray-900">{user?.firstName} {user?.lastName}</p>
+                      <p className="text-sm text-gray-500">{user?.email}</p>
+                      <span className="inline-block mt-1 px-2 py-0.5 bg-primary-100 text-primary-700 text-xs rounded-full">
+                        {user?.role}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Menu Items */}
+                <div className="py-2">
+                  <Link
+                    href={getProfileRoute()}
+                    onClick={() => setProfileOpen(false)}
+                    className="flex items-center px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50"
+                  >
+                    <HiUser className="mr-3 h-5 w-5 text-gray-400" />
+                    View Profile
+                  </Link>
+                  <Link
+                    href={`${getProfileRoute()}/edit`}
+                    onClick={() => setProfileOpen(false)}
+                    className="flex items-center px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50"
+                  >
+                    <HiCog className="mr-3 h-5 w-5 text-gray-400" />
+                    Edit Profile
+                  </Link>
+                  <div className="border-t border-gray-100 my-1"></div>
+                  <button
+                    onClick={handleLogout}
+                    className="w-full flex items-center px-4 py-2.5 text-sm text-danger-600 hover:bg-danger-50"
+                  >
+                    <HiLogout className="mr-3 h-5 w-5" />
+                    Sign Out
+                  </button>
+                </div>
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </header>
