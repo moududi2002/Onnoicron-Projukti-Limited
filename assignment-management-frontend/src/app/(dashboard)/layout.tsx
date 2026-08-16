@@ -75,11 +75,20 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
         <div className="px-6 py-4 border-b border-gray-200">
           <div className="flex items-center">
             <div className="flex-shrink-0">
+              {user?.profilePicture ? (
+              <img
+                src={`${process.env.NEXT_PUBLIC_API_URL}${user.profilePicture}`}
+                alt={`${user.firstName} ${user.lastName}`}
+                className="h-10 w-10 rounded-full object-cover border-2 border-primary-200"
+              />
+            ) : (
               <div className="h-10 w-10 rounded-full bg-primary-100 flex items-center justify-center">
                 <span className="text-primary-600 font-medium">
                   {user?.firstName?.[0]}{user?.lastName?.[0]}
                 </span>
               </div>
+            )}
+
             </div>
             <div className="ml-3">
               <p className="text-sm font-medium text-gray-900">{user?.firstName} {user?.lastName}</p>
@@ -222,7 +231,8 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
 
               {/* Actions */}
               <div className="flex items-center space-x-4">
-                {/* Notifications */}
+                {/*
+                |{/* Notifications 
                 <div className="relative">
                   <button
                     onClick={() => setNotificationsOpen(!notificationsOpen)}
@@ -230,24 +240,33 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
                   >
                     <HiBell className="h-6 w-6" />
                     <span className="absolute -top-1 -right-1 h-4 w-4 bg-danger-500 rounded-full text-xs text-white flex items-center justify-center">
-                      3
+                      
                     </span>
                   </button>
                 </div>
 
-                {/* Profile Dropdown */}
+                {/* Profile Dropdown 
                 <div className="relative">
                   <button
                     onClick={() => setProfileOpen(!profileOpen)}
                     className="flex items-center text-sm rounded-full focus:outline-none"
                   >
-                    <div className="h-8 w-8 rounded-full bg-primary-100 flex items-center justify-center">
-                      <span className="text-primary-600 font-medium text-sm">
-                        {user?.firstName?.[0]}{user?.lastName?.[0]}
-                      </span>
-                    </div>
+                    {user?.profilePicture ? (
+                      <img
+                        src={`${process.env.NEXT_PUBLIC_API_URL}${user.profilePicture}`}
+                        alt={`${user.firstName} ${user.lastName}`}
+                        className="h-8 w-8 rounded-full object-cover border-2 border-primary-200"
+                      />
+                      ) : (
+                      <div className="h-8 w-8 rounded-full bg-primary-100 flex items-center justify-center">
+                        <span className="text-primary-600 font-medium text-sm">
+                          {user?.firstName?.[0]}{user?.lastName?.[0]}
+                        </span>
+                      </div>
+                    )}
+
                   </button>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

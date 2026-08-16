@@ -47,21 +47,15 @@ export default function Header({ onMenuClick }: HeaderProps) {
   const getProfileImageUrl = (path?: string) => {
   if (!path) return '';
 
-  // Already a full URL
   if (path.startsWith('http://') || path.startsWith('https://')) {
     return path;
   }
 
-  const baseUrl = process.env.NEXT_PUBLIC_API_URL || '';
-
-  // Remove trailing /api or /
-  const cleanBaseUrl = baseUrl.replace(/\/api\/?$/, '').replace(/\/$/, '');
-
-  // Make sure path starts with /
+  const baseUrl = (process.env.NEXT_PUBLIC_API_URL || '').replace(/\/$/, '');
   const cleanPath = path.startsWith('/') ? path : `/${path}`;
 
-  return `${cleanBaseUrl}${cleanPath}`;
-};
+  return `${baseUrl}${cleanPath}`;
+  };
 
 
   return (

@@ -43,6 +43,7 @@ namespace AssignmentManagement.Application.Services
                     Role = user.Role,
                     FirstName = user.FirstName,
                     LastName = user.LastName,
+                    ProfilePicture = user.ProfilePicture,
                     IsActive = user.IsActive,
                     CreatedAt = user.CreatedAt
                 };
@@ -90,6 +91,7 @@ namespace AssignmentManagement.Application.Services
                 Role = user.Role,
                 FirstName = user.FirstName,
                 LastName = user.LastName,
+                ProfilePicture = user.ProfilePicture,
                 IsActive = user.IsActive,
                 CreatedAt = user.CreatedAt
             };
@@ -143,6 +145,7 @@ namespace AssignmentManagement.Application.Services
                 Role = user.Role,
                 FirstName = user.FirstName,
                 LastName = user.LastName,
+                ProfilePicture = user.ProfilePicture,
                 IsActive = user.IsActive,
                 CreatedAt = user.CreatedAt
             };

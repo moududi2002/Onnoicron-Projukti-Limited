@@ -49,7 +49,8 @@ namespace AssignmentManagement.API.Controllers
                     FirstName = user.FirstName,
                     LastName = user.LastName,
                     ProfilePicture = user.ProfilePicture,
-                    Role = user.Role.ToString()
+                    Role = user.Role.ToString(),
+                    ExpiresAt = DateTime.UtcNow.AddHours(8)
                 });
             }
             catch (Exception ex)

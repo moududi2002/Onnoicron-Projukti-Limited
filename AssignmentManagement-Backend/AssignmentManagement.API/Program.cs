@@ -107,7 +107,9 @@ var uploadsPath = Path.Combine(app.Environment.ContentRootPath, "Uploads");
 
 app.UseStaticFiles(new StaticFileOptions
 {
-    FileProvider = new PhysicalFileProvider(uploadsPath),
+   FileProvider = new PhysicalFileProvider(
+        Path.Combine(app.Environment.ContentRootPath, "Uploads")
+    ),
     RequestPath = "/api/uploads"
 });
 
