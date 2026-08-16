@@ -24,6 +24,7 @@ type ProfileFormData = z.infer<typeof profileSchema>;
 export default function UserProfile() {
   const { user, updateUser } = useAuth();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isEditing, setIsEditing] = useState(false);
   const [uploadingImage, setUploadingImage] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
@@ -91,6 +92,7 @@ export default function UserProfile() {
       };
       await apiClient.put(`/user/${user?.id}`, updatedData);
       updateUser(data);
+      setIsEditing(false);
       toast.success('Profile updated successfully');
     } catch (error: any) {
       toast.error(error.message || 'Failed to update profile');
@@ -124,7 +126,7 @@ export default function UserProfile() {
             <button
               onClick={() => fileInputRef.current?.click()}
               className="absolute bottom-0 right-0 bg-primary-600 text-white p-2 rounded-full hover:bg-primary-700 transition-colors"
-              disabled={uploadingImage}
+              disabled={!isEditing || uploadingImage}
               title="Upload profile picture"
             >
               {uploadingImage ? (
@@ -162,7 +164,8 @@ export default function UserProfile() {
             <label className="block text-sm font-medium text-gray-700">First Name</label>
             <input 
               {...register('firstName')} 
-              className="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500" 
+              disabled={!isEditing}
+              className="w-full border rounded-lg px-3 py-2 disabled:bg-gray-100 disabled:cursor-not-allowed" 
             />
             {errors.firstName && <p className="mt-1 text-sm text-danger-600">{errors.firstName.message}</p>}
           </div>
@@ -170,7 +173,8 @@ export default function UserProfile() {
             <label className="block text-sm font-medium text-gray-700">Last Name</label>
             <input 
               {...register('lastName')} 
-              className="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500" 
+              disabled={!isEditing}
+              className="w-full border rounded-lg px-3 py-2 disabled:bg-gray-100 disabled:cursor-not-allowed" 
             />
             {errors.lastName && <p className="mt-1 text-sm text-danger-600">{errors.lastName.message}</p>}
           </div>
@@ -183,7 +187,8 @@ export default function UserProfile() {
           <input 
             {...register('email')} 
             type="email" 
-            className="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500" 
+            disabled={!isEditing}
+            className="w-full border rounded-lg px-3 py-2 disabled:bg-gray-100 disabled:cursor-not-allowed" 
           />
           {errors.email && <p className="mt-1 text-sm text-danger-600">{errors.email.message}</p>}
         </div>
@@ -194,7 +199,8 @@ export default function UserProfile() {
           </label>
           <input 
             {...register('phone')} 
-            className="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500" 
+            disabled={!isEditing}
+            className="w-full border rounded-lg px-3 py-2 disabled:bg-gray-100 disabled:cursor-not-allowed" 
             placeholder="+880..." 
           />
         </div>
@@ -206,19 +212,29 @@ export default function UserProfile() {
           <textarea 
             {...register('address')} 
             rows={2} 
-            className="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500" 
+            disabled={!isEditing}
+            className="w-full border rounded-lg px-3 py-2 disabled:bg-gray-100 disabled:cursor-not-allowed" 
             placeholder="Your address..." 
           />
         </div>
 
         <div className="flex justify-end pt-4 border-t">
-          <button 
-            type="submit" 
-            disabled={isSubmitting} 
-            className="px-6 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 disabled:opacity-50"
-          >
-            {isSubmitting ? 'Saving...' : 'Update Profile'}
-          </button>
+          <button
+              type={isEditing ? 'submit' : 'button'}
+              disabled={isSubmitting}
+              className="px-6 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 disabled:opacity-50"
+              onClick={() => {
+                if (!isEditing) {
+                  setIsEditing(true);
+                }
+              }}
+                >
+              {isSubmitting
+                ? 'Saving...'
+                : isEditing
+                  ? 'Save'
+                  : 'Update Profile'}
+            </button>
         </div>
       </form>
     </div>
