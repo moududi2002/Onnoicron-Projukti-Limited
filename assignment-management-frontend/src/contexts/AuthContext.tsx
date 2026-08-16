@@ -59,17 +59,22 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const response = await apiClient.post<LoginResponse>('/auth/login', credentials);
 
   const userData: User = {
-    id: response.userId,
-    username: response.username,
-    email: response.email,
-    role: response.role,
-    firstName: response.firstName,
-    lastName: response.lastName,
-    profilePicture: response.profilePicture,
-    isActive: true,
-    createdAt: new Date().toISOString(),
-    fullName: `${response.firstName} ${response.lastName}`,
-  };
+  id: response.userId,
+  username: response.username,
+  email: response.email,
+  role: response.role,
+  firstName: response.firstName,
+  lastName: response.lastName,
+
+  profilePicture: response.profilePicture,
+  phone: response.phone,
+  address: response.address,
+
+  isActive: true,
+  createdAt: new Date().toISOString(),
+  fullName: `${response.firstName} ${response.lastName}`,
+};
+
 
   setToken(response.token);
   setUser(userData);

@@ -1,192 +1,476 @@
-// src/components/layout/Header.tsx
+// src/components/shared/UserProfile.tsx
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useAuth } from '@/contexts/AuthContext';
-import { useRouter } from 'next/navigation';
-import Link from 'next/link';
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { z } from 'zod';
+import { toast } from 'react-hot-toast';
+import { apiClient } from '@/services/api-client';
 import {
-  HiMenu, HiBell, HiSearch, HiLogout, HiUser, HiCog, HiChevronDown,
+  HiCamera,
+  HiUser,
+  HiMail,
+  HiPhone,
+  HiLocationMarker,
 } from 'react-icons/hi';
-import { useClickOutside } from '@/hooks/useClickOutside';
-import { useRef } from 'react';
+import { FileUploadResult } from '@/types';
 
-interface HeaderProps {
-  onMenuClick?: () => void;
-}
+const profileSchema = z.object({
+  firstName: z.string().min(1, 'First name is required'),
+  lastName: z.string().min(1, 'Last name is required'),
+  email: z.string().email('Invalid email'),
+  phone: z.string().optional(),
+  address: z.string().optional(),
+});
 
-export default function Header({ onMenuClick }: HeaderProps) {
-  const { user, logout } = useAuth();
-  const router = useRouter();
-  const [searchQuery, setSearchQuery] = useState('');
-  const [profileOpen, setProfileOpen] = useState(false);
-  const profileRef = useRef<HTMLDivElement>(null);
+type ProfileFormData = z.infer<typeof profileSchema>;
 
-  useClickOutside(profileRef, () => setProfileOpen(false));
+export default function UserProfile() {
+  const { user, updateUser } = useAuth();
 
-  const handleSearch = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Implement search
+  const [isEditing, setIsEditing] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [uploadingImage, setUploadingImage] = useState(false);
+
+  const fileInputRef = useRef<HTMLInputElement>(null);
+
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm<ProfileFormData>({
+    resolver: zodResolver(profileSchema),
+    defaultValues: {
+      firstName: '',
+      lastName: '',
+      email: '',
+      phone: '',
+      address: '',
+    },
+  });
+
+  // User load হলে form data বসাবে
+  useEffect(() => {
+    if (!user) return;
+
+    reset({
+      firstName: user.firstName || '',
+      lastName: user.lastName || '',
+      email: user.email || '',
+      phone: user.phone || '',
+      address: user.address || '',
+    });
+  }, [user, reset]);
+
+  const getProfileImageUrl = (path?: string) => {
+    if (!path) return '';
+
+    if (path.startsWith('http://') || path.startsWith('https://')) {
+      return path;
+    }
+
+    const baseUrl = (process.env.NEXT_PUBLIC_API_URL || '').replace(/\/$/, '');
+    const cleanPath = path.startsWith('/') ? path : `/${path}`;
+
+    return `${baseUrl}${cleanPath}`;
   };
 
-  const handleLogout = () => {
-    setProfileOpen(false);
-    logout();
-    router.push('/login');
+  const startEditing = () => {
+    console.log('UPDATE PROFILE CLICKED');
+
+    // Current user data form-এ বসাও
+    reset({
+      firstName: user?.firstName || '',
+      lastName: user?.lastName || '',
+      email: user?.email || '',
+      phone: user?.phone || '',
+      address: user?.address || '',
+    });
+
+    setIsEditing(true);
   };
 
-  const getProfileRoute = () => {
-    switch (user?.role) {
-      case 'Admin': return '/admin/profile';
-      case 'Teacher': return '/teacher/profile';
-      case 'Student': return '/student/profile';
-      default: return '/profile';
+  const cancelEditing = () => {
+    reset({
+      firstName: user?.firstName || '',
+      lastName: user?.lastName || '',
+      email: user?.email || '',
+      phone: user?.phone || '',
+      address: user?.address || '',
+    });
+
+    setIsEditing(false);
+  };
+
+  // =========================
+  // IMAGE UPLOAD
+  // =========================
+
+  const handleImageUpload = async (
+    e: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    const file = e.target.files?.[0];
+
+    if (!file) return;
+
+    const allowedTypes = [
+      'image/jpeg',
+      'image/png',
+      'image/gif',
+      'image/webp',
+    ];
+
+    if (!allowedTypes.includes(file.type)) {
+      toast.error('Please upload a valid image');
+      return;
+    }
+
+    if (file.size > 5 * 1024 * 1024) {
+      toast.error('Image must be less than 5MB');
+      return;
+    }
+
+    if (!user?.id) {
+      toast.error('User not found');
+      return;
+    }
+
+    setUploadingImage(true);
+
+    try {
+      const result = await apiClient.uploadFile<FileUploadResult>(
+        `/fileupload/profile/${user.id}`,
+        file
+      );
+
+      const profilePicture = result.fileUrl;
+
+      await apiClient.put(`/user/${user.id}`, {
+        profilePicture,
+      });
+
+      updateUser({
+        profilePicture,
+      });
+
+      toast.success('Profile picture updated successfully');
+    } catch (error: any) {
+      console.error(error);
+      toast.error(error?.message || 'Failed to upload image');
+    } finally {
+      setUploadingImage(false);
+
+      if (fileInputRef.current) {
+        fileInputRef.current.value = '';
+      }
     }
   };
 
-  const getProfileImageUrl = (path?: string) => {
-  if (!path) return '';
+  // =========================
+  // SAVE PROFILE
+  // =========================
 
-  if (path.startsWith('http://') || path.startsWith('https://')) {
-    return path;
-  }
+  const onSubmit = async (data: ProfileFormData) => {
+    console.log('FORM SUBMIT:', data);
 
-  const baseUrl = (process.env.NEXT_PUBLIC_API_URL || '').replace(/\/$/, '');
-  const cleanPath = path.startsWith('/') ? path : `/${path}`;
+    if (!user?.id) {
+      toast.error('User not found');
+      return;
+    }
 
-  return `${baseUrl}${cleanPath}`;
+    setIsSubmitting(true);
+
+    try {
+      const updatedData = {
+        ...data,
+        profilePicture: user.profilePicture || undefined,
+      };
+
+      console.log('SENDING TO API:', updatedData);
+
+      await apiClient.put(`/user/${user.id}`, updatedData);
+
+      updateUser({
+        ...data,
+        profilePicture: user.profilePicture,
+      });
+
+      reset(data);
+
+      setIsEditing(false);
+
+      toast.success('Profile updated successfully');
+    } catch (error: any) {
+      console.error('PROFILE UPDATE ERROR:', error);
+
+      toast.error(
+        error?.message || 'Failed to update profile'
+      );
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
-
   return (
-    <header className="bg-white shadow-sm border-b border-gray-200">
-      <div className="flex items-center justify-between h-16 px-4 sm:px-6">
-        {/* Left: Menu + Search */}
-        <div className="flex items-center space-x-4 flex-1">
-          {onMenuClick && (
-            <button onClick={onMenuClick} className="lg:hidden text-gray-500 hover:text-gray-700">
-              <HiMenu className="h-6 w-6" />
-            </button>
-          )}
-          <div className="max-w-md w-full hidden sm:block">
-            <form onSubmit={handleSearch}>
-              <div className="relative">
-                <HiSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
-                <input
-                  type="text"
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  placeholder="Search..."
-                  className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 text-sm"
-                />
-              </div>
-            </form>
-          </div>
-        </div>
+    <div className="max-w-2xl mx-auto space-y-6">
 
-        {/* Right: Notifications + Profile */}
-        <div className="flex items-center space-x-4">
-          {/* Notifications 
-          <button className="relative text-gray-500 hover:text-gray-700">
-            <HiBell className="h-6 w-6" />
-            <span className="absolute -top-1 -right-1 h-4 w-4 bg-danger-500 rounded-full text-xs text-white flex items-center justify-center">
-              3
-            </span>
-          </button> */}
+      <h1 className="text-2xl font-bold text-gray-900">
+        My Profile
+      </h1>
 
-          {/* Profile Dropdown */}
-          <div className="relative" ref={profileRef}>
-            <button
-              onClick={() => setProfileOpen(!profileOpen)}
-              className="flex items-center space-x-2 focus:outline-none hover:bg-gray-50 rounded-lg px-2 py-1 transition-colors"
-            >
-              {/* Profile Picture / Avatar */}
-              {user?.profilePicture ? (
-                <img
-                  src={getProfileImageUrl(user.profilePicture)}
-                  alt={`${user.firstName} ${user.lastName}`}
-                  className="h-9 w-9 rounded-full object-cover border-2 border-primary-200"
-                />
-              ) : (
-                <div className="h-9 w-9 rounded-full bg-primary-100 border-2 border-primary-200 flex items-center justify-center">
-                  <span className="text-primary-600 font-semibold text-sm">
-                    {user?.firstName?.[0]}{user?.lastName?.[0]}
-                  </span>
-                </div>
-              )}
-              <div className="hidden md:block text-left">
-                <p className="text-sm font-medium text-gray-900 leading-tight">
-                  {user?.firstName} {user?.lastName}
-                </p>
-                <p className="text-xs text-gray-500 leading-tight">{user?.role}</p>
-              </div>
-              <HiChevronDown className={`h-4 w-4 text-gray-400 transition-transform ${profileOpen ? 'rotate-180' : ''}`} />
-            </button>
+      {/* ================= PROFILE HEADER ================= */}
 
-            {/* Dropdown Menu */}
-            {profileOpen && (
-              <div className="absolute right-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 z-50">
-                {/* User Info Header */}
-                <div className="px-4 py-3 border-b border-gray-200">
-                  <div className="flex items-center space-x-3">
-                    {user?.profilePicture ? (
-                      <img
-                        src={getProfileImageUrl(user.profilePicture)}
-                        alt="Profile"
-                        className="h-12 w-12 rounded-full object-cover"
-                      />
-                    ) : (
-                      <div className="h-12 w-12 rounded-full bg-primary-100 flex items-center justify-center">
-                        <span className="text-primary-600 font-bold text-lg">
-                          {user?.firstName?.[0]}{user?.lastName?.[0]}
-                        </span>
-                      </div>
-                    )}
-                    <div>
-                      <p className="font-medium text-gray-900">{user?.firstName} {user?.lastName}</p>
-                      <p className="text-sm text-gray-500">{user?.email}</p>
-                      <span className="inline-block mt-1 px-2 py-0.5 bg-primary-100 text-primary-700 text-xs rounded-full">
-                        {user?.role}
-                      </span>
-                    </div>
-                  </div>
-                </div>
+      <div className="bg-white rounded-lg shadow p-6">
 
-                {/* Menu Items */}
-                <div className="py-2">
-                  <Link
-                    href={getProfileRoute()}
-                    onClick={() => setProfileOpen(false)}
-                    className="flex items-center px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50"
-                  >
-                    <HiUser className="mr-3 h-5 w-5 text-gray-400" />
-                    View Profile
-                  </Link>
+        <div className="flex items-center space-x-6">
 
-                 <Link
-                    href={`${getProfileRoute()}/edit`}
-                    onClick={() => setProfileOpen(false)}
-                    className="flex items-center px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50"
-                  >
-                    <HiCog className="mr-3 h-5 w-5 text-gray-400" />
-                    Edit Profile
-                  </Link>
-                  
+          {/* IMAGE */}
 
-                  <div className="border-t border-gray-100 my-1"></div>
-                  <button
-                    onClick={handleLogout}
-                    className="w-full flex items-center px-4 py-2.5 text-sm text-danger-600 hover:bg-danger-50"
-                  >
-                    <HiLogout className="mr-3 h-5 w-5" />
-                    Sign Out
-                  </button>
-                </div>
+          <div className="relative">
+
+            {user?.profilePicture ? (
+              <img
+                src={getProfileImageUrl(user.profilePicture)}
+                alt="Profile"
+                className="h-24 w-24 rounded-full object-cover border-2 border-primary-200"
+              />
+            ) : (
+              <div className="h-24 w-24 rounded-full bg-primary-100 border-2 border-primary-200 flex items-center justify-center">
+                <HiUser className="h-12 w-12 text-primary-400" />
               </div>
             )}
+
+            <button
+              type="button"
+              onClick={() => fileInputRef.current?.click()}
+              disabled={!isEditing || uploadingImage}
+              className="absolute bottom-0 right-0 bg-primary-600 text-white p-2 rounded-full hover:bg-primary-700 disabled:opacity-50"
+            >
+              {uploadingImage ? (
+                <div className="animate-spin h-4 w-4 border-2 border-white border-t-transparent rounded-full" />
+              ) : (
+                <HiCamera className="h-4 w-4" />
+              )}
+            </button>
+
+            <input
+              ref={fileInputRef}
+              type="file"
+              accept="image/jpeg,image/png,image/gif,image/webp"
+              className="hidden"
+              onChange={handleImageUpload}
+            />
+
           </div>
+
+          {/* USER INFO */}
+
+          <div>
+            <h2 className="text-xl font-bold text-gray-900">
+              {user?.firstName} {user?.lastName}
+            </h2>
+
+            <span className="inline-block mt-1 px-2 py-0.5 bg-primary-100 text-primary-700 text-xs font-medium rounded-full">
+              {user?.role}
+            </span>
+
+            <p className="text-sm text-gray-500 mt-1 flex items-center">
+              <HiMail className="h-4 w-4 mr-1" />
+              {user?.email}
+            </p>
+          </div>
+
         </div>
+
       </div>
-    </header>
+
+      {/* ================= FORM ================= */}
+
+      <form
+        onSubmit={handleSubmit(onSubmit)}
+        className="bg-white rounded-lg shadow p-6 space-y-6"
+      >
+
+        <div className="flex justify-between items-center">
+
+          <h2 className="text-lg font-semibold text-gray-900">
+            Profile Information
+          </h2>
+
+          {/* DEBUG */}
+          <span className="text-xs text-gray-400">
+            {isEditing ? 'EDIT MODE' : 'VIEW MODE'}
+          </span>
+
+        </div>
+
+        {/* FIRST NAME / LAST NAME */}
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+          <div>
+
+            <label className="block text-sm font-medium text-gray-700">
+              First Name
+            </label>
+
+            <input
+              {...register('firstName')}
+              disabled={!isEditing}
+              className={`w-full border rounded-lg px-3 py-2 ${
+                isEditing
+                  ? 'bg-white border-primary-500'
+                  : 'bg-gray-100'
+              }`}
+            />
+
+            {errors.firstName && (
+              <p className="mt-1 text-sm text-red-600">
+                {errors.firstName.message}
+              </p>
+            )}
+
+          </div>
+
+          <div>
+
+            <label className="block text-sm font-medium text-gray-700">
+              Last Name
+            </label>
+
+            <input
+              {...register('lastName')}
+              disabled={!isEditing}
+              className={`w-full border rounded-lg px-3 py-2 ${
+                isEditing
+                  ? 'bg-white border-primary-500'
+                  : 'bg-gray-100'
+              }`}
+            />
+
+            {errors.lastName && (
+              <p className="mt-1 text-sm text-red-600">
+                {errors.lastName.message}
+              </p>
+            )}
+
+          </div>
+
+        </div>
+
+        {/* EMAIL */}
+
+        <div>
+
+          <label className="block text-sm font-medium text-gray-700">
+            <HiMail className="inline h-4 w-4 mr-1" />
+            Email
+          </label>
+
+          <input
+            {...register('email')}
+            type="email"
+            disabled={!isEditing}
+            className={`w-full border rounded-lg px-3 py-2 ${
+              isEditing
+                ? 'bg-white border-primary-500'
+                : 'bg-gray-100'
+            }`}
+          />
+
+          {errors.email && (
+            <p className="mt-1 text-sm text-red-600">
+              {errors.email.message}
+            </p>
+          )}
+
+        </div>
+
+        {/* PHONE */}
+
+        <div>
+
+          <label className="block text-sm font-medium text-gray-700">
+            <HiPhone className="inline h-4 w-4 mr-1" />
+            Phone
+          </label>
+
+          <input
+            {...register('phone')}
+            disabled={!isEditing}
+            placeholder="+880..."
+            className={`w-full border rounded-lg px-3 py-2 ${
+              isEditing
+                ? 'bg-white border-primary-500'
+                : 'bg-gray-100'
+            }`}
+          />
+
+        </div>
+
+        {/* ADDRESS */}
+
+        <div>
+
+          <label className="block text-sm font-medium text-gray-700">
+            <HiLocationMarker className="inline h-4 w-4 mr-1" />
+            Address
+          </label>
+
+          <textarea
+            {...register('address')}
+            rows={3}
+            disabled={!isEditing}
+            placeholder="Your address..."
+            className={`w-full border rounded-lg px-3 py-2 ${
+              isEditing
+                ? 'bg-white border-primary-500'
+                : 'bg-gray-100'
+            }`}
+          />
+
+        </div>
+
+        {/* ================= BUTTONS ================= */}
+
+        <div className="flex justify-end gap-3 pt-4 border-t">
+
+          {!isEditing ? (
+            <button
+              type="button"
+              onClick={startEditing}
+              className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
+            >
+              Update Profile
+            </button>
+          ) : (
+            <>
+              <button
+                type="button"
+                onClick={cancelEditing}
+                disabled={isSubmitting}
+                className="px-6 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600"
+              >
+                Cancel
+              </button>
+
+              <button
+                type="submit"
+                disabled={isSubmitting}
+                className="px-6 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 disabled:opacity-50"
+              >
+                {isSubmitting ? 'Saving...' : 'Save'}
+              </button>
+            </>
+          )}
+
+        </div>
+
+      </form>
+
+    </div>
   );
 }

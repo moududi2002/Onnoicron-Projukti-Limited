@@ -14,6 +14,8 @@ export interface LoginResponse {
   lastName: string;
   profilePicture?: string;
   expiresAt: string;
+  phone?: string;
+  address?: string;
 }
 
 export interface RegisterRequest {
