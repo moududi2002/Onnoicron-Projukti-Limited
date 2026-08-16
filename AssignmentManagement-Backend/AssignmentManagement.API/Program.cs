@@ -7,6 +7,8 @@ using Microsoft.EntityFrameworkCore;
 using AssignmentManagement.Application.Validators;
 using FluentValidation;
 using System.Text.Json.Serialization;
+using Microsoft.Extensions.FileProviders;
+
 
 
 
@@ -99,6 +101,16 @@ builder.Services.AddScoped<ISubmissionService, SubmissionService>();
 builder.Services.AddValidatorsFromAssemblyContaining<CreateAssignmentValidator>();
 
 var app = builder.Build();
+
+// photo upload
+var uploadsPath = Path.Combine(app.Environment.ContentRootPath, "Uploads");
+
+app.UseStaticFiles(new StaticFileOptions
+{
+    FileProvider = new PhysicalFileProvider(uploadsPath),
+    RequestPath = "/api/uploads"
+});
+
 
 // Database Initialization
 using (var scope = app.Services.CreateScope())

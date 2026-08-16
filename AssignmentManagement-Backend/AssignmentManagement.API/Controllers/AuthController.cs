@@ -45,6 +45,10 @@ namespace AssignmentManagement.API.Controllers
                     Token = token,
                     UserId = user.Id,
                     Username = user.Username,
+                    Email = user.Email,
+                    FirstName = user.FirstName,
+                    LastName = user.LastName,
+                    ProfilePicture = user.ProfilePicture,
                     Role = user.Role.ToString()
                 });
             }
