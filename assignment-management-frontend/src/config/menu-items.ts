@@ -15,6 +15,7 @@ export const adminMenu: MenuItem[] = [
   { key: 'subjects', label: 'Subjects', icon: 'book-open', path: '/admin/subjects', roles: ['Admin'] },
   { key: 'assignments', label: 'Assignments', icon: 'clipboard-list', path: '/admin/assignments', roles: ['Admin'] },
   { key: 'divider-1', label: '', roles: ['Admin'], divider: true },
+  { key: 'profile', label: 'Profile', icon: 'user', path: '/admin/profile', roles: ['Teacher'] },
   { key: 'settings', label: 'Settings', icon: 'cog', path: '/admin/settings', roles: ['Admin'] },
 ];
 

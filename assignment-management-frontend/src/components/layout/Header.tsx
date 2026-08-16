@@ -44,6 +44,26 @@ export default function Header({ onMenuClick }: HeaderProps) {
     }
   };
 
+  const getProfileImageUrl = (path?: string) => {
+  if (!path) return '';
+
+  // Already a full URL
+  if (path.startsWith('http://') || path.startsWith('https://')) {
+    return path;
+  }
+
+  const baseUrl = process.env.NEXT_PUBLIC_API_URL || '';
+
+  // Remove trailing /api or /
+  const cleanBaseUrl = baseUrl.replace(/\/api\/?$/, '').replace(/\/$/, '');
+
+  // Make sure path starts with /
+  const cleanPath = path.startsWith('/') ? path : `/${path}`;
+
+  return `${cleanBaseUrl}${cleanPath}`;
+};
+
+
   return (
     <header className="bg-white shadow-sm border-b border-gray-200">
       <div className="flex items-center justify-between h-16 px-4 sm:px-6">
@@ -72,13 +92,13 @@ export default function Header({ onMenuClick }: HeaderProps) {
 
         {/* Right: Notifications + Profile */}
         <div className="flex items-center space-x-4">
-          {/* Notifications */}
+          {/* Notifications 
           <button className="relative text-gray-500 hover:text-gray-700">
             <HiBell className="h-6 w-6" />
             <span className="absolute -top-1 -right-1 h-4 w-4 bg-danger-500 rounded-full text-xs text-white flex items-center justify-center">
               3
             </span>
-          </button>
+          </button> */}
 
           {/* Profile Dropdown */}
           <div className="relative" ref={profileRef}>
@@ -89,7 +109,7 @@ export default function Header({ onMenuClick }: HeaderProps) {
               {/* Profile Picture / Avatar */}
               {user?.profilePicture ? (
                 <img
-                  src={user.profilePicture}
+                  src={getProfileImageUrl(user.profilePicture)}
                   alt={`${user.firstName} ${user.lastName}`}
                   className="h-9 w-9 rounded-full object-cover border-2 border-primary-200"
                 />
@@ -117,7 +137,7 @@ export default function Header({ onMenuClick }: HeaderProps) {
                   <div className="flex items-center space-x-3">
                     {user?.profilePicture ? (
                       <img
-                        src={user.profilePicture}
+                        src={getProfileImageUrl(user.profilePicture)}
                         alt="Profile"
                         className="h-12 w-12 rounded-full object-cover"
                       />

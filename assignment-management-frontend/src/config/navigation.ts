@@ -82,16 +82,29 @@ export const navigation: NavItem[] = [
     icon: HiAcademicCap,
     roles: ['Teacher'],
   },
+  
   {
+    label: 'Profile',
+    href: '/admin/profile',
+    icon: HiUser,
+    roles: ['Admin'],
+  },
+   {
+    label: 'Profile',
+    href: '/teacher/profile',
+    icon: HiUser,
+    roles: ['Teacher'],
+  },
+   {
+    label: 'Profile',
+    href: 'student/profile',
+    icon: HiUser,
+    roles: ['Student'],
+  },
+{
     label: 'Settings',
     href: '/admin/settings',
     icon: HiCog,
     roles: ['Admin'],
-  },
-  {
-    label: 'Profile',
-    href: '/profile',
-    icon: HiUser,
-    roles: ['admin','Teacher', 'Student'],
-  },
+  }
 ];

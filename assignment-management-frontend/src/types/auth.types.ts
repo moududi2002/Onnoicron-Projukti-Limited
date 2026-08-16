@@ -12,6 +12,7 @@ export interface LoginResponse {
   role: 'Admin' | 'Teacher' | 'Student';
   firstName: string;
   lastName: string;
+  profilePicture?: string;
   expiresAt: string;
 }
 

@@ -65,6 +65,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     role: response.role,
     firstName: response.firstName,
     lastName: response.lastName,
+    profilePicture: response.profilePicture,
     isActive: true,
     createdAt: new Date().toISOString(),
     fullName: `${response.firstName} ${response.lastName}`,

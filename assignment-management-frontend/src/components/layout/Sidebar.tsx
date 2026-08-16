@@ -123,13 +123,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
             </div>
           );
         })}
-        <Link
-        href={`/${user?.role.toLowerCase()}/profile`}
-        className="flex items-center px-3 py-2 text-sm font-medium rounded-lg transition-colors text-gray-700 hover:bg-gray-100"
-      >
-        <HiUser className="mr-3 h-5 w-5 flex-shrink-0" />
-        My Profile
-        </Link>
+        
       </nav>
 
       {/* Logout */}
